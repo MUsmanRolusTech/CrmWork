@@ -16,6 +16,14 @@
       'len' => '510',
       'importable' => 'false',
     ),
+    'custom_address_' => 
+    array (
+      'name' => 'custom_address_',
+      'vname' => 'LBL_CUSTOM_ADDRESS',
+      'type' => 'varchar',
+      'len' => '510',
+      'importable' => 'false',
+    ),
     'jjwg_maps_lat_c' => 
     array (
       'inline_edit' => 1,

@@ -357,10 +357,10 @@ value='{$value}' title=''      >
 
 
 
-<div class="col-xs-12 col-sm-12 edit-view-row-item">
+<div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-2 label" data-label="">
+<div class="col-xs-12 col-sm-4 label" data-label="">
 
 {minify}
 {capture name="label" assign="label"}{sugar_translate label='LBL_ASSIGNED_TO_NAME' module='Contacts'}{/capture}
@@ -369,11 +369,42 @@ value='{$value}' title=''      >
 {/minify}
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field="" colspan='3' >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="" field=""  >
 </div>
 
 <!-- [/hide] -->
 </div>
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_CUSTOM_ADDRESS">
+
+{minify}
+{capture name="label" assign="label"}{sugar_translate label='LBL_CUSTOM_ADDRESS' module='Contacts'}{/capture}
+{$label|strip_semicolon}:
+
+{/minify}
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="varchar" field="custom_address_"  >
+{counter name="panelFieldCount" print=false}
+
+{if strlen($fields.custom_address_.value) <= 0}
+{assign var="value" value=$fields.custom_address_.default_value }
+{else}
+{assign var="value" value=$fields.custom_address_.value }
+{/if}  
+<input type='text' name='{$fields.custom_address_.name}' 
+id='{$fields.custom_address_.name}' size='30' 
+maxlength='510' 
+value='{$value}' title=''      >
+</div>
+
+<!-- [/hide] -->
+</div>
+<div class="clear"></div>
 <div class="clear"></div>
 </div>                    </div>
 </div>
@@ -553,6 +584,7 @@ $(document).ready(function() {ldelim}
 {/literal}{literal}
 <script type="text/javascript">
 addForm('EditView');addToValidate('EditView', 'custom_email_', 'varchar', false,'{/literal}{sugar_translate label='LBL_CUSTOM_EMAIL' module='Contacts' for_js=true}{literal}' );
+addToValidate('EditView', 'custom_address_', 'varchar', false,'{/literal}{sugar_translate label='LBL_CUSTOM_ADDRESS' module='Contacts' for_js=true}{literal}' );
 addToValidate('EditView', 'jjwg_maps_lat_c', 'float', false,'{/literal}{sugar_translate label='LBL_JJWG_MAPS_LAT' module='Contacts' for_js=true}{literal}' );
 addToValidate('EditView', 'jjwg_maps_address_c', 'varchar', false,'{/literal}{sugar_translate label='LBL_JJWG_MAPS_ADDRESS' module='Contacts' for_js=true}{literal}' );
 addToValidate('EditView', 'jjwg_maps_geocode_status_c', 'varchar', false,'{/literal}{sugar_translate label='LBL_JJWG_MAPS_GEOCODE_STATUS' module='Contacts' for_js=true}{literal}' );

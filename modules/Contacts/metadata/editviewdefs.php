@@ -205,6 +205,9 @@ array(
             'name' => 'assigned_user_name',
             'label' => 'LBL_ASSIGNED_TO_NAME',
           ),
+          1 => array(
+            'name' => 'custom_address_',
+          ),
         ),
       ),
       'LBL_PANEL_ADVANCED' =>
