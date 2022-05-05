@@ -8,3 +8,5 @@ Thu May  5 16:58:44 2022 [841898][1][SECURITY] Invalid ext  logger_file_ext : ''
 Thu May  5 16:58:44 2022 [841898][1][SECURITY] Setting logger_file_ext to ''.
 Thu May  5 16:58:44 2022 [841898][1][SECURITY] Log file extension can't be blank.
 Thu May  5 16:58:44 2022 [841898][1][SECURITY] Log file extension can't be blank.
+Thu May  5 18:16:16 2022 [841896][1][FATAL] Exception handling in /var/www/html/crmwork/include/MVC/Controller/SugarController.php:409
+Thu May  5 18:16:16 2022 [841896][1][FATAL] Exception in Controller: Error retrieving record. This record may be deleted or you may not be authorized to view it.

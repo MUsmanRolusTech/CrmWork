@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2022-05-05 17:31:47
+<?php /* Smarty version 2.6.33, created on 2022-05-05 18:16:03
          compiled from cache/themes/SuiteP/modules/Accounts/SearchForm_basic.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', 'cache/themes/SuiteP/modules/Accounts/SearchForm_basic.tpl', 31, false),array('function', 'math', 'cache/themes/SuiteP/modules/Accounts/SearchForm_basic.tpl', 32, false),array('function', 'sugar_translate', 'cache/themes/SuiteP/modules/Accounts/SearchForm_basic.tpl', 38, false),array('function', 'sugar_getimagepath', 'cache/themes/SuiteP/modules/Accounts/SearchForm_basic.tpl', 114, false),)), $this); ?>
@@ -39,7 +39,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', '
 
 	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 search_fields_basic">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-						<label for='name_basic'> <?php echo smarty_function_sugar_translate(array('label' => 'LBL_NAME','module' => 'Accounts'), $this);?>
+						<label for='name_basic'> <?php echo smarty_function_sugar_translate(array('label' => '','module' => 'Accounts'), $this);?>
 </label>
 					</div>
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
@@ -53,7 +53,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', '
 ' 
     id='<?php echo $this->_tpl_vars['fields']['name_basic']['name']; ?>
 ' size='30' 
-    maxlength='150' 
+     
     value='<?php echo $this->_tpl_vars['value']; ?>
 ' title=''      accesskey='9'  >
 		</div>
@@ -151,4 +151,4 @@ value="1" title='' tabindex="" <?php echo $this->_tpl_vars['checked']; ?>
 	});
 	'; ?>
 
-</script><?php echo '<script language="javascript">if(typeof sqs_objects == \'undefined\'){var sqs_objects = new Array;}sqs_objects[\'search_form_modified_by_name_basic\']={"form":"search_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["modified_by_name_basic","modified_user_id_basic"],"required_list":["modified_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects[\'search_form_created_by_name_basic\']={"form":"search_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["created_by_name_basic","created_by_basic"],"required_list":["created_by"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects[\'search_form_assigned_user_name_basic\']={"form":"search_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name_basic","assigned_user_id_basic"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects[\'search_form_parent_name_basic\']={"form":"search_form","method":"query","modules":["Accounts"],"group":"or","field_list":["name","id"],"populate_list":["search_form_parent_name_basic","parent_id_basic"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"required_list":["parent_id"],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects[\'search_form_campaign_name_basic\']={"form":"search_form","method":"query","modules":["Campaigns"],"group":"or","field_list":["name","id"],"populate_list":["campaign_id_basic","campaign_id_basic"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"required_list":["campaign_id"],"order":"name","limit":"30","no_match_text":"No Match"};</script>'; ?>
+</script><?php echo ''; ?>

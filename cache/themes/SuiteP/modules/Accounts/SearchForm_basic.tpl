@@ -36,7 +36,7 @@
     }
 	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 search_fields_basic">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-						<label for='name_basic'> {sugar_translate label='LBL_NAME' module='Accounts'}</label>
+						<label for='name_basic'> {sugar_translate label='' module='Accounts'}</label>
 					</div>
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
 		
@@ -47,7 +47,7 @@
 {/if}  
 <input type='text' name='{$fields.name_basic.name}' 
     id='{$fields.name_basic.name}' size='30' 
-    maxlength='150' 
+     
     value='{$value}' title=''      accesskey='9'  >
 		</div>
 		<div class="search-clear"></div>
@@ -126,4 +126,4 @@ value="1" title='' tabindex="" {$checked} >
 		});
 	});
 	{/literal}
-</script>{literal}<script language="javascript">if(typeof sqs_objects == 'undefined'){var sqs_objects = new Array;}sqs_objects['search_form_modified_by_name_basic']={"form":"search_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["modified_by_name_basic","modified_user_id_basic"],"required_list":["modified_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects['search_form_created_by_name_basic']={"form":"search_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["created_by_name_basic","created_by_basic"],"required_list":["created_by"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects['search_form_assigned_user_name_basic']={"form":"search_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name_basic","assigned_user_id_basic"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects['search_form_parent_name_basic']={"form":"search_form","method":"query","modules":["Accounts"],"group":"or","field_list":["name","id"],"populate_list":["search_form_parent_name_basic","parent_id_basic"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"required_list":["parent_id"],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects['search_form_campaign_name_basic']={"form":"search_form","method":"query","modules":["Campaigns"],"group":"or","field_list":["name","id"],"populate_list":["campaign_id_basic","campaign_id_basic"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"required_list":["campaign_id"],"order":"name","limit":"30","no_match_text":"No Match"};</script>{/literal}
+</script>{literal}{/literal}
