@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.33, created on 2022-05-05 18:16:05
+<?php /* Smarty version 2.6.33, created on 2022-05-06 11:47:56
          compiled from cache/themes/SuiteP/modules/Accounts/EditView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 47, false),array('modifier', 'strip_semicolon', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 102, false),array('function', 'sugar_include', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 63, false),array('function', 'sugar_translate', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 84, false),array('function', 'counter', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 394, false),array('block', 'minify', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 100, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 47, false),array('modifier', 'strip_semicolon', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 102, false),array('function', 'sugar_include', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 63, false),array('function', 'sugar_translate', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 84, false),array('function', 'counter', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 109, false),array('function', 'sugar_getjspath', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 246, false),array('function', 'html_options', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 559, false),array('block', 'minify', 'cache/themes/SuiteP/modules/Accounts/EditView.tpl', 100, false),)), $this); ?>
 
 
 <script>
@@ -154,7 +154,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_NAME">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 <?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_NAME','module' => 'Accounts'), $this);?>
@@ -166,7 +166,22 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field=""  >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="name" field="name"  >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<?php if (strlen ( $this->_tpl_vars['fields']['name']['value'] ) <= 0): ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['name']['default_value']); ?>
+<?php else: ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['name']['value']); ?>
+<?php endif; ?>  
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['name']['name']; ?>
+' 
+id='<?php echo $this->_tpl_vars['fields']['name']['name']; ?>
+' size='30' 
+maxlength='150' 
+value='<?php echo $this->_tpl_vars['value']; ?>
+' title=''      >
 </div>
 
 <!-- [/hide] -->
@@ -176,7 +191,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_PHONE_OFFICE">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 <?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_PHONE_OFFICE','module' => 'Accounts'), $this);?>
@@ -187,7 +202,19 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field=""  >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="phone" field="phone_office"  class="phone">
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<?php if (strlen ( $this->_tpl_vars['fields']['phone_office']['value'] ) <= 0): ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['phone_office']['default_value']); ?>
+<?php else: ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['phone_office']['value']); ?>
+<?php endif; ?>  
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['phone_office']['name']; ?>
+' id='<?php echo $this->_tpl_vars['fields']['phone_office']['name']; ?>
+' size='30' maxlength='100' value='<?php echo $this->_tpl_vars['value']; ?>
+' title='' tabindex='0'	  class="phone" >
 </div>
 
 <!-- [/hide] -->
@@ -200,7 +227,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_WEBSITE">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 <?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_WEBSITE','module' => 'Accounts'), $this);?>
@@ -211,7 +238,23 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field=""  >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="url" field="website"  >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<?php if (! empty ( $this->_tpl_vars['fields']['website']['value'] )): ?>
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['website']['name']; ?>
+' id='<?php echo $this->_tpl_vars['fields']['website']['name']; ?>
+' size='30' 
+maxlength='255' value='<?php echo $this->_tpl_vars['fields']['website']['value']; ?>
+' title='' tabindex='0'  >
+<?php else: ?>
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['website']['name']; ?>
+' id='<?php echo $this->_tpl_vars['fields']['website']['name']; ?>
+' size='30' 
+maxlength='255'	   	   <?php if ($this->_tpl_vars['displayView'] == 'advanced_search' || $this->_tpl_vars['displayView'] == 'basic_search'): ?>value=''<?php else: ?>value='http://'<?php endif; ?> 
+title='' tabindex='0'  >
+<?php endif; ?>
 </div>
 
 <!-- [/hide] -->
@@ -221,7 +264,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_FAX">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 <?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_FAX','module' => 'Accounts'), $this);?>
@@ -232,7 +275,19 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field=""  >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="phone" field="phone_fax"  class="phone">
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<?php if (strlen ( $this->_tpl_vars['fields']['phone_fax']['value'] ) <= 0): ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['phone_fax']['default_value']); ?>
+<?php else: ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['phone_fax']['value']); ?>
+<?php endif; ?>  
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['phone_fax']['name']; ?>
+' id='<?php echo $this->_tpl_vars['fields']['phone_fax']['name']; ?>
+' size='30' maxlength='100' value='<?php echo $this->_tpl_vars['value']; ?>
+' title='' tabindex='0'	  class="phone" >
 </div>
 
 <!-- [/hide] -->
@@ -245,7 +300,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-12 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-2 label" data-label="">
+<div class="col-xs-12 col-sm-2 label" data-label="LBL_EMAIL">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 <?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_EMAIL','module' => 'Accounts'), $this);?>
@@ -256,7 +311,12 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field="" colspan='3' >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="varchar" field="email1" colspan='3' >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+<span id='email1_span'>
+<?php echo $this->_tpl_vars['fields']['email1']['value']; ?>
+</span>
 </div>
 
 <!-- [/hide] -->
@@ -269,7 +329,113 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 
 
 
-<div class="col-xs-12 col-sm-12 edit-view-field " type="" field="" colspan='2' >
+<div class="col-xs-12 col-sm-12 edit-view-field " type="varchar" field="billing_address_street" colspan='2' >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<script src='<?php echo smarty_function_sugar_getjspath(array('file' => "include/SugarFields/Fields/Address/SugarFieldAddress.js"), $this);?>
+'></script>
+<fieldset id='BILLING_address_fieldset'>
+<legend><?php echo smarty_function_sugar_translate(array('label' => 'LBL_BILLING_ADDRESS','module' => ''), $this);?>
+</legend>
+<table border="0" cellspacing="1" cellpadding="0" class="edit" width="100%">
+<tr>
+<td valign="top" id="billing_address_street_label" width='25%' scope='row'>
+<label for="billing_address_street"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_BILLING_STREET','module' => ''), $this);?>
+:</label>
+<?php if ($this->_tpl_vars['fields']['billing_address_street']['required'] || false): ?>
+<span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
+</span>
+<?php endif; ?>
+</td>
+<td width="*">
+<textarea id="billing_address_street" name="billing_address_street" title='' maxlength="150"
+                          rows="2" cols="30"
+                          tabindex="0"><?php echo $this->_tpl_vars['fields']['billing_address_street']['value']; ?>
+</textarea>
+</td>
+</tr>
+<tr>
+<td id="billing_address_city_label" width='%'
+scope='row'>
+<label for="billing_address_city"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_CITY','module' => ''), $this);?>
+:
+<?php if ($this->_tpl_vars['fields']['billing_address_city']['required'] || false): ?>
+<span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
+</span>
+<?php endif; ?>
+</td>
+<td>
+<input type="text" name="billing_address_city" id="billing_address_city" title='<?php echo $this->_tpl_vars['fields']['billing_address_city']['help']; ?>
+' size="30"
+maxlength='150' value='<?php echo $this->_tpl_vars['fields']['billing_address_city']['value']; ?>
+'
+tabindex="0">
+</td>
+</tr>
+<tr>
+<td id="billing_address_state_label" width='%'
+scope='row'>
+<label for="billing_address_state"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATE','module' => ''), $this);?>
+:</label>
+<?php if ($this->_tpl_vars['fields']['billing_address_state']['required'] || false): ?>
+<span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
+</span>
+<?php endif; ?>
+</td>
+<td>
+<input type="text" name="billing_address_state" id="billing_address_state" title='<?php echo $this->_tpl_vars['fields']['billing_address_state']['help']; ?>
+' size="30"
+maxlength='150' value='<?php echo $this->_tpl_vars['fields']['billing_address_state']['value']; ?>
+'
+tabindex="0">
+</td>
+</tr>
+<tr>
+<td id="billing_address_postalcode_label"
+width='%' scope='row'>
+<label for="billing_address_postalcode"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_POSTAL_CODE','module' => ''), $this);?>
+:</label>
+<?php if ($this->_tpl_vars['fields']['billing_address_postalcode']['required'] || false): ?>
+<span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
+</span>
+<?php endif; ?>
+</td>
+<td>
+<input type="text" name="billing_address_postalcode" id="billing_address_postalcode" title='<?php echo $this->_tpl_vars['fields']['billing_address_postalcode']['help']; ?>
+' size="30"
+maxlength='150'                       value='<?php echo $this->_tpl_vars['fields']['billing_address_postalcode']['value']; ?>
+' tabindex="0">
+</td>
+</tr>
+<tr>
+<td id="billing_address_country_label" width='%'
+scope='row'>
+<label for="billing_address_country"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_COUNTRY','module' => ''), $this);?>
+:</label>
+<?php if ($this->_tpl_vars['fields']['billing_address_country']['required'] || false): ?>
+<span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
+</span>
+<?php endif; ?>
+</td>
+<td>
+<input type="text" name="billing_address_country" id="billing_address_country" title='<?php echo $this->_tpl_vars['fields']['billing_address_country']['help']; ?>
+' size="30"
+maxlength='150' value='<?php echo $this->_tpl_vars['fields']['billing_address_country']['value']; ?>
+'
+tabindex="0">
+</td>
+</tr>
+<tr>
+<td colspan='2' NOWRAP>&nbsp;</td>
+</tr>
+</table>
+</fieldset>
+<script type="text/javascript">
+  SUGAR.util.doWhen("typeof(SUGAR.AddressField) != 'undefined'", function () {
+      billing_address = new SUGAR.AddressField("billing_checkbox", '', 'billing');
+      });
+</script>
 </div>
 
 <!-- [/hide] -->
@@ -280,7 +446,120 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 
 
 
-<div class="col-xs-12 col-sm-12 edit-view-field " type="" field="" colspan='2' >
+<div class="col-xs-12 col-sm-12 edit-view-field " type="varchar" field="shipping_address_street" colspan='2' >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<script src='<?php echo smarty_function_sugar_getjspath(array('file' => "include/SugarFields/Fields/Address/SugarFieldAddress.js"), $this);?>
+'></script>
+<fieldset id='SHIPPING_address_fieldset'>
+<legend><?php echo smarty_function_sugar_translate(array('label' => 'LBL_SHIPPING_ADDRESS','module' => ''), $this);?>
+</legend>
+<table border="0" cellspacing="1" cellpadding="0" class="edit" width="100%">
+<tr>
+<td valign="top" id="shipping_address_street_label" width='25%' scope='row'>
+<label for="shipping_address_street"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_SHIPPING_STREET','module' => ''), $this);?>
+:</label>
+<?php if ($this->_tpl_vars['fields']['shipping_address_street']['required'] || false): ?>
+<span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
+</span>
+<?php endif; ?>
+</td>
+<td width="*">
+<textarea id="shipping_address_street" name="shipping_address_street" title='' maxlength="150"
+                          rows="2" cols="30"
+                          tabindex="0"><?php echo $this->_tpl_vars['fields']['shipping_address_street']['value']; ?>
+</textarea>
+</td>
+</tr>
+<tr>
+<td id="shipping_address_city_label" width='%'
+scope='row'>
+<label for="shipping_address_city"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_CITY','module' => ''), $this);?>
+:
+<?php if ($this->_tpl_vars['fields']['shipping_address_city']['required'] || false): ?>
+<span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
+</span>
+<?php endif; ?>
+</td>
+<td>
+<input type="text" name="shipping_address_city" id="shipping_address_city" title='<?php echo $this->_tpl_vars['fields']['shipping_address_city']['help']; ?>
+' size="30"
+maxlength='150' value='<?php echo $this->_tpl_vars['fields']['shipping_address_city']['value']; ?>
+'
+tabindex="0">
+</td>
+</tr>
+<tr>
+<td id="shipping_address_state_label" width='%'
+scope='row'>
+<label for="shipping_address_state"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATE','module' => ''), $this);?>
+:</label>
+<?php if ($this->_tpl_vars['fields']['shipping_address_state']['required'] || false): ?>
+<span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
+</span>
+<?php endif; ?>
+</td>
+<td>
+<input type="text" name="shipping_address_state" id="shipping_address_state" title='<?php echo $this->_tpl_vars['fields']['shipping_address_state']['help']; ?>
+' size="30"
+maxlength='150' value='<?php echo $this->_tpl_vars['fields']['shipping_address_state']['value']; ?>
+'
+tabindex="0">
+</td>
+</tr>
+<tr>
+<td id="shipping_address_postalcode_label"
+width='%' scope='row'>
+<label for="shipping_address_postalcode"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_POSTAL_CODE','module' => ''), $this);?>
+:</label>
+<?php if ($this->_tpl_vars['fields']['shipping_address_postalcode']['required'] || false): ?>
+<span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
+</span>
+<?php endif; ?>
+</td>
+<td>
+<input type="text" name="shipping_address_postalcode" id="shipping_address_postalcode" title='<?php echo $this->_tpl_vars['fields']['shipping_address_postalcode']['help']; ?>
+' size="30"
+maxlength='150'                       value='<?php echo $this->_tpl_vars['fields']['shipping_address_postalcode']['value']; ?>
+' tabindex="0">
+</td>
+</tr>
+<tr>
+<td id="shipping_address_country_label" width='%'
+scope='row'>
+<label for="shipping_address_country"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_COUNTRY','module' => ''), $this);?>
+:</label>
+<?php if ($this->_tpl_vars['fields']['shipping_address_country']['required'] || false): ?>
+<span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
+</span>
+<?php endif; ?>
+</td>
+<td>
+<input type="text" name="shipping_address_country" id="shipping_address_country" title='<?php echo $this->_tpl_vars['fields']['shipping_address_country']['help']; ?>
+' size="30"
+maxlength='150' value='<?php echo $this->_tpl_vars['fields']['shipping_address_country']['value']; ?>
+'
+tabindex="0">
+</td>
+</tr>
+<tr>
+<td scope='row' NOWRAP>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_COPY_ADDRESS_FROM_LEFT','module' => ''), $this);?>
+:
+</td>
+<td>
+<input id="shipping_checkbox" name="shipping_checkbox" type="checkbox"
+onclick="shipping_address.syncFields();">
+</td>
+</tr>
+</table>
+</fieldset>
+<script type="text/javascript">
+  SUGAR.util.doWhen("typeof(SUGAR.AddressField) != 'undefined'", function () {
+      shipping_address = new SUGAR.AddressField("shipping_checkbox", 'billing', 'shipping');
+      });
+</script>
 </div>
 
 <!-- [/hide] -->
@@ -293,7 +572,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-12 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-2 label" data-label="">
+<div class="col-xs-12 col-sm-2 label" data-label="LBL_DESCRIPTION">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 <?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_DESCRIPTION','module' => 'Accounts'), $this);?>
@@ -304,7 +583,25 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field="" colspan='3' >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="text" field="description" colspan='3' >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<?php if (empty ( $this->_tpl_vars['fields']['description']['value'] )): ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['description']['default_value']); ?>
+<?php else: ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['description']['value']); ?>
+<?php endif; ?>
+<textarea  id='<?php echo $this->_tpl_vars['fields']['description']['name']; ?>
+' name='<?php echo $this->_tpl_vars['fields']['description']['name']; ?>
+'
+rows="6"
+cols="80"
+title='' tabindex="0" 
+ ><?php echo $this->_tpl_vars['value']; ?>
+</textarea>
+<?php echo ''; ?>
+
 </div>
 
 <!-- [/hide] -->
@@ -316,7 +613,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-12 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-2 label" data-label="">
+<div class="col-xs-12 col-sm-2 label" data-label="LBL_ASSIGNED_TO_NAME">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 <?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO','module' => 'Accounts'), $this);?>
@@ -327,7 +624,55 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field="" colspan='3' >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="relate" field="assigned_user_name" colspan='3' >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<input type="text" name="<?php echo $this->_tpl_vars['fields']['assigned_user_name']['name']; ?>
+" class="sqsEnabled" tabindex="0" id="<?php echo $this->_tpl_vars['fields']['assigned_user_name']['name']; ?>
+" size="" value="<?php echo $this->_tpl_vars['fields']['assigned_user_name']['value']; ?>
+" title='' autocomplete="off"  	 >
+<input type="hidden" name="<?php echo $this->_tpl_vars['fields']['assigned_user_name']['id_name']; ?>
+" 
+id="<?php echo $this->_tpl_vars['fields']['assigned_user_name']['id_name']; ?>
+" 
+value="<?php echo $this->_tpl_vars['fields']['assigned_user_id']['value']; ?>
+">
+<span class="id-ff multiple">
+<button type="button" name="btn_<?php echo $this->_tpl_vars['fields']['assigned_user_name']['name']; ?>
+" id="btn_<?php echo $this->_tpl_vars['fields']['assigned_user_name']['name']; ?>
+" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_SELECT_USERS_TITLE'), $this);?>
+" class="button firstChild" value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_SELECT_USERS_LABEL'), $this);?>
+"
+onclick='open_popup(
+"<?php echo $this->_tpl_vars['fields']['assigned_user_name']['module']; ?>
+", 
+600, 
+400, 
+"", 
+true, 
+false, 
+<?php echo '{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"assigned_user_id","user_name":"assigned_user_name"}}'; ?>
+, 
+"single", 
+true
+);' ><span class="suitepicon suitepicon-action-select"></span></button><button type="button" name="btn_clr_<?php echo $this->_tpl_vars['fields']['assigned_user_name']['name']; ?>
+" id="btn_clr_<?php echo $this->_tpl_vars['fields']['assigned_user_name']['name']; ?>
+" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_USERS_TITLE'), $this);?>
+"  class="button lastChild"
+onclick="SUGAR.clearRelateField(this.form, '<?php echo $this->_tpl_vars['fields']['assigned_user_name']['name']; ?>
+', '<?php echo $this->_tpl_vars['fields']['assigned_user_name']['id_name']; ?>
+');"  value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_USERS_LABEL'), $this);?>
+" ><span class="suitepicon suitepicon-action-clear"></span></button>
+</span>
+<script type="text/javascript">
+SUGAR.util.doWhen(
+		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['<?php echo $this->_tpl_vars['form_name']; ?>
+_<?php echo $this->_tpl_vars['fields']['assigned_user_name']['name']; ?>
+']) != 'undefined'",
+		enableQS
+);
+</script>
 </div>
 
 <!-- [/hide] -->
@@ -359,15 +704,35 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_TYPE">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-&nbsp;
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_TYPE','module' => 'Accounts'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
 
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field=""  >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="enum" field="account_type"  >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<select name="<?php echo $this->_tpl_vars['fields']['account_type']['name']; ?>
+"
+id="<?php echo $this->_tpl_vars['fields']['account_type']['name']; ?>
+"
+title=''          
+>
+<?php if (isset ( $this->_tpl_vars['fields']['account_type']['value'] ) && $this->_tpl_vars['fields']['account_type']['value'] != ''): ?>
+<?php echo smarty_function_html_options(array('options' => $this->_tpl_vars['fields']['account_type']['options'],'selected' => $this->_tpl_vars['fields']['account_type']['value']), $this);?>
+
+<?php else: ?>
+<?php echo smarty_function_html_options(array('options' => $this->_tpl_vars['fields']['account_type']['options'],'selected' => $this->_tpl_vars['fields']['account_type']['default']), $this);?>
+
+<?php endif; ?>
+</select>
 </div>
 
 <!-- [/hide] -->
@@ -377,15 +742,35 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_INDUSTRY">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-&nbsp;
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_INDUSTRY','module' => 'Accounts'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
 
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field=""  >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="enum" field="industry"  >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<select name="<?php echo $this->_tpl_vars['fields']['industry']['name']; ?>
+"
+id="<?php echo $this->_tpl_vars['fields']['industry']['name']; ?>
+"
+title=''          
+>
+<?php if (isset ( $this->_tpl_vars['fields']['industry']['value'] ) && $this->_tpl_vars['fields']['industry']['value'] != ''): ?>
+<?php echo smarty_function_html_options(array('options' => $this->_tpl_vars['fields']['industry']['options'],'selected' => $this->_tpl_vars['fields']['industry']['value']), $this);?>
+
+<?php else: ?>
+<?php echo smarty_function_html_options(array('options' => $this->_tpl_vars['fields']['industry']['options'],'selected' => $this->_tpl_vars['fields']['industry']['default']), $this);?>
+
+<?php endif; ?>
+</select>
 </div>
 
 <!-- [/hide] -->
@@ -398,15 +783,33 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_ANNUAL_REVENUE">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-&nbsp;
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_ANNUAL_REVENUE','module' => 'Accounts'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
 
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field=""  >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="varchar" field="annual_revenue"  >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<?php if (strlen ( $this->_tpl_vars['fields']['annual_revenue']['value'] ) <= 0): ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['annual_revenue']['default_value']); ?>
+<?php else: ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['annual_revenue']['value']); ?>
+<?php endif; ?>  
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['annual_revenue']['name']; ?>
+' 
+id='<?php echo $this->_tpl_vars['fields']['annual_revenue']['name']; ?>
+' size='30' 
+maxlength='100' 
+value='<?php echo $this->_tpl_vars['value']; ?>
+' title=''      >
 </div>
 
 <!-- [/hide] -->
@@ -416,15 +819,33 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_EMPLOYEES">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-&nbsp;
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_EMPLOYEES','module' => 'Accounts'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
 
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field=""  >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="varchar" field="employees"  >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<?php if (strlen ( $this->_tpl_vars['fields']['employees']['value'] ) <= 0): ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['employees']['default_value']); ?>
+<?php else: ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['employees']['value']); ?>
+<?php endif; ?>  
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['employees']['name']; ?>
+' 
+id='<?php echo $this->_tpl_vars['fields']['employees']['name']; ?>
+' size='30' 
+maxlength='10' 
+value='<?php echo $this->_tpl_vars['value']; ?>
+' title=''      >
 </div>
 
 <!-- [/hide] -->
@@ -437,15 +858,66 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_MEMBER_OF">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-&nbsp;
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_MEMBER_OF','module' => 'Accounts'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
 
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field=""  >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="relate" field="parent_name"  >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<input type="text" name="<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
+" class="sqsEnabled" tabindex="0" id="<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
+" size="" value="<?php echo $this->_tpl_vars['fields']['parent_name']['value']; ?>
+" title='' autocomplete="off"  	 >
+<input type="hidden" name="<?php echo $this->_tpl_vars['fields']['parent_name']['id_name']; ?>
+" 
+id="<?php echo $this->_tpl_vars['fields']['parent_name']['id_name']; ?>
+" 
+value="<?php echo $this->_tpl_vars['fields']['parent_id']['value']; ?>
+">
+<span class="id-ff multiple">
+<button type="button" name="btn_<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
+" id="btn_<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
+" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_SELECT_ACCOUNTS_TITLE'), $this);?>
+" class="button firstChild" value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_SELECT_ACCOUNTS_LABEL'), $this);?>
+"
+onclick='open_popup(
+"<?php echo $this->_tpl_vars['fields']['parent_name']['module']; ?>
+", 
+600, 
+400, 
+"", 
+true, 
+false, 
+<?php echo '{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"parent_id","name":"parent_name"}}'; ?>
+, 
+"single", 
+true
+);' ><span class="suitepicon suitepicon-action-select"></span></button><button type="button" name="btn_clr_<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
+" id="btn_clr_<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
+" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_ACCOUNTS_TITLE'), $this);?>
+"  class="button lastChild"
+onclick="SUGAR.clearRelateField(this.form, '<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
+', '<?php echo $this->_tpl_vars['fields']['parent_name']['id_name']; ?>
+');"  value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_ACCOUNTS_LABEL'), $this);?>
+" ><span class="suitepicon suitepicon-action-clear"></span></button>
+</span>
+<script type="text/javascript">
+SUGAR.util.doWhen(
+		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['<?php echo $this->_tpl_vars['form_name']; ?>
+_<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
+']) != 'undefined'",
+		enableQS
+);
+</script>
 </div>
 
 <!-- [/hide] -->
@@ -466,18 +938,18 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="varchar" field="custom_mobile_"  >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="varchar" field="custom_mobile"  >
 <?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
 
 
-<?php if (strlen ( $this->_tpl_vars['fields']['custom_mobile_']['value'] ) <= 0): ?>
-<?php $this->assign('value', $this->_tpl_vars['fields']['custom_mobile_']['default_value']); ?>
+<?php if (strlen ( $this->_tpl_vars['fields']['custom_mobile']['value'] ) <= 0): ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['custom_mobile']['default_value']); ?>
 <?php else: ?>
-<?php $this->assign('value', $this->_tpl_vars['fields']['custom_mobile_']['value']); ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['custom_mobile']['value']); ?>
 <?php endif; ?>  
-<input type='text' name='<?php echo $this->_tpl_vars['fields']['custom_mobile_']['name']; ?>
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['custom_mobile']['name']; ?>
 ' 
-id='<?php echo $this->_tpl_vars['fields']['custom_mobile_']['name']; ?>
+id='<?php echo $this->_tpl_vars['fields']['custom_mobile']['name']; ?>
 ' size='30' 
 maxlength='510' 
 value='<?php echo $this->_tpl_vars['value']; ?>
@@ -494,15 +966,66 @@ value='<?php echo $this->_tpl_vars['value']; ?>
 <div class="col-xs-12 col-sm-12 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-2 label" data-label="">
+<div class="col-xs-12 col-sm-2 label" data-label="LBL_CAMPAIGN">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-&nbsp;
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_CAMPAIGN','module' => 'Accounts'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
 
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="" field="" colspan='3' >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="relate" field="campaign_name" colspan='3' >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<input type="text" name="<?php echo $this->_tpl_vars['fields']['campaign_name']['name']; ?>
+" class="sqsEnabled" tabindex="0" id="<?php echo $this->_tpl_vars['fields']['campaign_name']['name']; ?>
+" size="" value="<?php echo $this->_tpl_vars['fields']['campaign_name']['value']; ?>
+" title='' autocomplete="off"  	 >
+<input type="hidden" name="<?php echo $this->_tpl_vars['fields']['campaign_name']['id_name']; ?>
+" 
+id="<?php echo $this->_tpl_vars['fields']['campaign_name']['id_name']; ?>
+" 
+value="<?php echo $this->_tpl_vars['fields']['campaign_id']['value']; ?>
+">
+<span class="id-ff multiple">
+<button type="button" name="btn_<?php echo $this->_tpl_vars['fields']['campaign_name']['name']; ?>
+" id="btn_<?php echo $this->_tpl_vars['fields']['campaign_name']['name']; ?>
+" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_SELECT_CAMPAIGNS_TITLE'), $this);?>
+" class="button firstChild" value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_SELECT_CAMPAIGNS_LABEL'), $this);?>
+"
+onclick='open_popup(
+"<?php echo $this->_tpl_vars['fields']['campaign_name']['module']; ?>
+", 
+600, 
+400, 
+"", 
+true, 
+false, 
+<?php echo '{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"campaign_id","name":"campaign_name"}}'; ?>
+, 
+"single", 
+true
+);' ><span class="suitepicon suitepicon-action-select"></span></button><button type="button" name="btn_clr_<?php echo $this->_tpl_vars['fields']['campaign_name']['name']; ?>
+" id="btn_clr_<?php echo $this->_tpl_vars['fields']['campaign_name']['name']; ?>
+" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_CAMPAIGNS_TITLE'), $this);?>
+"  class="button lastChild"
+onclick="SUGAR.clearRelateField(this.form, '<?php echo $this->_tpl_vars['fields']['campaign_name']['name']; ?>
+', '<?php echo $this->_tpl_vars['fields']['campaign_name']['id_name']; ?>
+');"  value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_CAMPAIGNS_LABEL'), $this);?>
+" ><span class="suitepicon suitepicon-action-clear"></span></button>
+</span>
+<script type="text/javascript">
+SUGAR.util.doWhen(
+		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['<?php echo $this->_tpl_vars['form_name']; ?>
+_<?php echo $this->_tpl_vars['fields']['campaign_name']['name']; ?>
+']) != 'undefined'",
+		enableQS
+);
+</script>
 </div>
 
 <!-- [/hide] -->
@@ -645,7 +1168,147 @@ $(document).ready(function() {
 '; ?>
 <?php echo '
 <script type="text/javascript">
-addForm(\'EditView\');addToValidate(\'EditView\', \'custom_mobile_\', \'varchar\', false,\''; ?>
+addForm(\'EditView\');addToValidate(\'EditView\', \'name\', \'name\', true,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_NAME','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'date_entered_date\', \'date\', false,\'Date Created\' );
+addToValidate(\'EditView\', \'date_modified_date\', \'date\', false,\'Date Modified\' );
+addToValidate(\'EditView\', \'modified_user_id\', \'assigned_user_name\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_MODIFIED','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'modified_by_name\', \'relate\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_MODIFIED_NAME','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'created_by\', \'assigned_user_name\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_CREATED','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'created_by_name\', \'relate\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_CREATED','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'description\', \'text\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_DESCRIPTION','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'deleted\', \'bool\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_DELETED','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'assigned_user_id\', \'relate\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO_ID','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'assigned_user_name\', \'relate\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO_NAME','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'account_type\', \'enum\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_TYPE','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'industry\', \'enum\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_INDUSTRY','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'annual_revenue\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ANNUAL_REVENUE','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'phone_fax\', \'phone\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_FAX','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'billing_address_street\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_BILLING_ADDRESS_STREET','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'billing_address_street_2\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_BILLING_ADDRESS_STREET_2','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'billing_address_street_3\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_BILLING_ADDRESS_STREET_3','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'billing_address_street_4\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_BILLING_ADDRESS_STREET_4','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'billing_address_city\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_BILLING_ADDRESS_CITY','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'billing_address_state\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_BILLING_ADDRESS_STATE','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'billing_address_postalcode\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_BILLING_ADDRESS_POSTALCODE','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'billing_address_country\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_BILLING_ADDRESS_COUNTRY','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'rating\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_RATING','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'phone_office\', \'phone\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_PHONE_OFFICE','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'phone_alternate\', \'phone\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_PHONE_ALT','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'website\', \'url\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_WEBSITE','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'ownership\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_OWNERSHIP','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'employees\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_EMPLOYEES','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'ticker_symbol\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_TICKER_SYMBOL','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'shipping_address_street\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SHIPPING_ADDRESS_STREET','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'shipping_address_street_2\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SHIPPING_ADDRESS_STREET_2','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'shipping_address_street_3\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SHIPPING_ADDRESS_STREET_3','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'shipping_address_street_4\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SHIPPING_ADDRESS_STREET_4','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'shipping_address_city\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SHIPPING_ADDRESS_CITY','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'shipping_address_state\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SHIPPING_ADDRESS_STATE','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'shipping_address_postalcode\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SHIPPING_ADDRESS_POSTALCODE','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'shipping_address_country\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SHIPPING_ADDRESS_COUNTRY','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'email1\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_EMAIL','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'email_addresses_non_primary\', \'email\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_EMAIL_NON_PRIMARY','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'parent_id\', \'id\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_PARENT_ACCOUNT_ID','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'sic_code\', \'varchar\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SIC_CODE','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'parent_name\', \'relate\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_MEMBER_OF','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'email_opt_out\', \'bool\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_EMAIL_OPT_OUT','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'invalid_email\', \'bool\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_INVALID_EMAIL','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'email\', \'email\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ANY_EMAIL','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'campaign_id\', \'id\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_CAMPAIGN_ID','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'campaign_name\', \'relate\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_CAMPAIGN','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'custom_mobile\', \'varchar\', false,\''; ?>
 <?php echo smarty_function_sugar_translate(array('label' => 'LBL_CUSTOM_MOBILE','module' => 'Accounts','for_js' => true), $this);?>
 <?php echo '\' );
 addToValidate(\'EditView\', \'jjwg_maps_lat_c\', \'float\', false,\''; ?>
@@ -665,4 +1328,14 @@ addToValidateBinaryDependency(\'EditView\', \'assigned_user_name\', \'alpha\', f
 <?php echo ': '; ?>
 <?php echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO','module' => 'Accounts','for_js' => true), $this);?>
 <?php echo '\', \'assigned_user_id\' );
-</script>'; ?>
+addToValidateBinaryDependency(\'EditView\', \'parent_name\', \'alpha\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo ': '; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_MEMBER_OF','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\', \'parent_id\' );
+addToValidateBinaryDependency(\'EditView\', \'campaign_name\', \'alpha\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo ': '; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_CAMPAIGN','module' => 'Accounts','for_js' => true), $this);?>
+<?php echo '\', \'campaign_id\' );
+</script><script language="javascript">if(typeof sqs_objects == \'undefined\'){var sqs_objects = new Array;}sqs_objects[\'EditView_assigned_user_name\']={"form":"EditView","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name","assigned_user_id"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects[\'EditView_parent_name\']={"form":"EditView","method":"query","modules":["Accounts"],"group":"or","field_list":["name","id"],"populate_list":["EditView_parent_name","parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"required_list":["parent_id"],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects[\'EditView_campaign_name\']={"form":"EditView","method":"query","modules":["Campaigns"],"group":"or","field_list":["name","id"],"populate_list":["campaign_id","campaign_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"required_list":["campaign_id"],"order":"name","limit":"30","no_match_text":"No Match"};</script>'; ?>
