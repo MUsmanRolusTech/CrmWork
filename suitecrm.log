@@ -10,3 +10,11 @@ Thu May  5 16:58:44 2022 [841898][1][SECURITY] Log file extension can't be blank
 Thu May  5 16:58:44 2022 [841898][1][SECURITY] Log file extension can't be blank.
 Thu May  5 18:16:16 2022 [841896][1][FATAL] Exception handling in /var/www/html/crmwork/include/MVC/Controller/SugarController.php:409
 Thu May  5 18:16:16 2022 [841896][1][FATAL] Exception in Controller: Error retrieving record. This record may be deleted or you may not be authorized to view it.
+Fri May  6 17:41:51 2022 [3936601][1][FATAL] Mysqli_query failed.
+Fri May  6 17:41:51 2022 [3936601][1][FATAL] Executing repair query:  Query Failed: ALTER TABLE contacts   add COLUMN `custom_phone_no` varchar(24)  NULL: MySQL error 1060: Duplicate column name 'custom_phone_no'
+Fri May  6 17:41:51 2022 [3936601][1][FATAL] Exception handling in /var/www/html/crmwork/include/MVC/Controller/SugarController.php:409
+Fri May  6 17:41:51 2022 [3936601][1][FATAL] Exception in Controller: Database failure. Please refer to suitecrm.log for details.
+Fri May  6 17:41:54 2022 [3936601][1][FATAL] Mysqli_query failed.
+Fri May  6 17:41:54 2022 [3936601][1][FATAL] Executing repair query:  Query Failed: ALTER TABLE contacts   add COLUMN `custom_phone_no` varchar(24)  NULL: MySQL error 1060: Duplicate column name 'custom_phone_no'
+Fri May  6 17:41:54 2022 [3936601][1][FATAL] Exception handling in /var/www/html/crmwork/include/MVC/Controller/SugarController.php:409
+Fri May  6 17:41:54 2022 [3936601][1][FATAL] Exception in Controller: Database failure. Please refer to suitecrm.log for details.

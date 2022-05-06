@@ -1,5 +1,5 @@
 <?php
-// created: 2022-05-05 18:15:28
+// created: 2022-05-06 18:02:28
 $mod_strings = array (
   'LBL_ID' => 'ID:',
   'LBL_DATE_ENTERED' => 'Date Created',
@@ -191,4 +191,5 @@ $mod_strings = array (
   'LBL_AOS_INVOICES' => 'Invoices',
   'LBL_AOS_QUOTES' => 'Quotes',
   'LBL_PROJECT_CONTACTS_1_FROM_PROJECT_TITLE' => 'Project Contacts from Project Title',
+  'LBL_CUSTOM_PHONE_NO' => 'Home Phone',
 );

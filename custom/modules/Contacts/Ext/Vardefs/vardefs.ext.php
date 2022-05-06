@@ -3,23 +3,12 @@
 
 
 
-$dictionary['Contact']['fields'] = array(
-    'custom_email_' =>
-    array(
-        'name' => 'custom_email_',
-        'vname' => 'LBL_CUSTOM_EMAIL',
+$dictionary['Contact']['fields']['custom_phone_no'] = array(
+        'name' => 'custom_phone_no',
+        'vname' => 'LBL_CUSTOM_PHONE_NO',
         'type' => 'varchar',
-        'len' => '510',
+        'len' => '24',
         'importable' => 'false',
-    ),
-    'custom_address_' =>
-    array(
-        'name' => 'custom_address_',
-        'vname' => 'LBL_CUSTOM_ADDRESS',
-        'type' => 'varchar',
-        'len' => '510',
-        'importable' => 'false',
-    ),
 );
 
 
