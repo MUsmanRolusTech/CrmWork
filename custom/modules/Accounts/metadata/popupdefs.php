@@ -54,6 +54,7 @@ $popupMeta = array(
     'billing_address_country' => 'accounts.billing_address_country',
     'email' => 'accounts.email',
     'assigned_user_id' => 'accounts.assigned_user_id',
+    'custom_mobile' => 'accounts.custom_mobile',
   ),
   'searchInputs' => array(
     0 => 'name',
@@ -64,6 +65,7 @@ $popupMeta = array(
     6 => 'billing_address_country',
     7 => 'email',
     8 => 'assigned_user_id',
+    9 => 'custom_mobile',
   ),
   'create' => array(
     'formBase' => 'AccountFormBase.php',
@@ -88,6 +90,12 @@ $popupMeta = array(
       'label' => 'LBL_TYPE',
       'width' => '10%',
       'name' => 'account_type',
+    ),
+    'custom_mobile' =>
+    array(
+      'label' => 'LBL_CUSTOM_MOBILE',
+      'width' => '10%',
+      'name' => 'custom_mobile',
     ),
     'industry' =>
     array(
@@ -140,6 +148,12 @@ $popupMeta = array(
       'link' => true,
       'default' => true,
       'name' => 'name',
+    ),
+    'CUSTOM_MOBILE' =>
+    array(
+      'width' => '10%',
+      'label' => 'LBL_CUSTOM_MOBILE',
+      'name' => 'custom_mobile',
     ),
     'ACCOUNT_TYPE' =>
     array(

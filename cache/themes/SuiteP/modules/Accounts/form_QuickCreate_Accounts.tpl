@@ -299,10 +299,10 @@ title=''
 
 
 
-<div class="col-xs-12 col-sm-12 edit-view-row-item">
+<div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-2 label" data-label="LBL_ASSIGNED_TO">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_ASSIGNED_TO">
 
 {minify}
 {capture name="label" assign="label"}{sugar_translate label='LBL_ASSIGNED_TO' module='Accounts'}{/capture}
@@ -311,7 +311,7 @@ title=''
 {/minify}
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="relate" field="assigned_user_name" colspan='3' >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="relate" field="assigned_user_name"  >
 {counter name="panelFieldCount" print=false}
 
 <input type="text" name="{$fields.assigned_user_name.name}" class="sqsEnabled" tabindex="0" id="{$fields.assigned_user_name.name}" size="" value="{$fields.assigned_user_name.value}" title='' autocomplete="off"  	 >
@@ -343,6 +343,37 @@ SUGAR.util.doWhen(
 
 <!-- [/hide] -->
 </div>
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_CUSTOM_MOBILE">
+
+{minify}
+{capture name="label" assign="label"}{sugar_translate label='LBL_CUSTOM_MOBILE' module='Accounts'}{/capture}
+{$label|strip_semicolon}:
+
+{/minify}
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="varchar" field="custom_mobile"  >
+{counter name="panelFieldCount" print=false}
+
+{if strlen($fields.custom_mobile.value) <= 0}
+{assign var="value" value=$fields.custom_mobile.default_value }
+{else}
+{assign var="value" value=$fields.custom_mobile.value }
+{/if}  
+<input type='text' name='{$fields.custom_mobile.name}' 
+id='{$fields.custom_mobile.name}' size='30' 
+maxlength='510' 
+value='{$value}' title=''      >
+</div>
+
+<!-- [/hide] -->
+</div>
+<div class="clear"></div>
 <div class="clear"></div>
 </div>                    </div>
 </div>
