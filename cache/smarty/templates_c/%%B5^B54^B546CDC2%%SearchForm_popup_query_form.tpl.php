@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.33, created on 2022-05-06 18:13:09
+<?php /* Smarty version 2.6.33, created on 2022-05-09 13:02:42
          compiled from cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 27, false),array('function', 'math', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 28, false),array('function', 'sugar_translate', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 34, false),array('function', 'html_options', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 66, false),array('function', 'sugar_getimage', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 235, false),array('function', 'sugar_getimagepath', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 316, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 27, false),array('function', 'math', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 28, false),array('function', 'sugar_translate', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 34, false),array('function', 'html_options', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 66, false),array('function', 'sugar_getimage', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 263, false),array('function', 'sugar_getimagepath', 'cache/themes/SuiteP/modules/Accounts/SearchForm_popup_query_form.tpl', 344, false),)), $this); ?>
 
 <script>
     <?php echo '
@@ -73,6 +73,37 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', '
                                 
 <?php echo smarty_function_html_options(array('id' => 'account_type_advanced','name' => 'account_type_advanced[]','options' => $this->_tpl_vars['fields']['account_type_advanced']['options'],'size' => '6','class' => 'templateGroupChooser','multiple' => '1','selected' => $this->_tpl_vars['fields']['account_type_advanced']['value']), $this);?>
 
+                            </div>
+        </div>
+    </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-advanced-search">
+        <div class="">
+            
+              
+
+            <?php echo smarty_function_counter(array('assign' => 'index'), $this);?>
+
+            <?php echo smarty_function_math(array('equation' => "left % right",'left' => $this->_tpl_vars['index'],'right' => $this->_tpl_vars['templateMeta']['maxColumns'],'assign' => 'modVal'), $this);?>
+
+
+            <div class="col-xs-12">
+                                <label for='custom_mobile_advanced'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_CUSTOM_MOBILE','module' => 'Accounts'), $this);?>
+</label>
+                            </div>
+            <div class="form-item">
+                                
+<?php if (strlen ( $this->_tpl_vars['fields']['custom_mobile_advanced']['value'] ) <= 0): ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['custom_mobile_advanced']['default_value']); ?>
+<?php else: ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['custom_mobile_advanced']['value']); ?>
+<?php endif; ?>  
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['custom_mobile_advanced']['name']; ?>
+' 
+    id='<?php echo $this->_tpl_vars['fields']['custom_mobile_advanced']['name']; ?>
+' size='30' 
+    maxlength='510' 
+    value='<?php echo $this->_tpl_vars['value']; ?>
+' title=''      >
                             </div>
         </div>
     </div>

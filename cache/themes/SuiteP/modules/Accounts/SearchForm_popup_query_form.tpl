@@ -82,6 +82,35 @@
             }
 
             <div class="col-xs-12">
+                                <label for='custom_mobile_advanced'>{sugar_translate label='LBL_CUSTOM_MOBILE' module='Accounts'}</label>
+                            </div>
+            <div class="form-item">
+                                
+{if strlen($fields.custom_mobile_advanced.value) <= 0}
+{assign var="value" value=$fields.custom_mobile_advanced.default_value }
+{else}
+{assign var="value" value=$fields.custom_mobile_advanced.value }
+{/if}  
+<input type='text' name='{$fields.custom_mobile_advanced.name}' 
+    id='{$fields.custom_mobile_advanced.name}' size='30' 
+    maxlength='510' 
+    value='{$value}' title=''      >
+                            </div>
+        </div>
+    </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-advanced-search">
+        <div class="">
+            
+              
+
+            {counter assign=index}
+            {math equation="left % right"
+            left=$index
+            right=$templateMeta.maxColumns
+            assign=modVal
+            }
+
+            <div class="col-xs-12">
                                 <label for='industry_advanced'>{sugar_translate label='LBL_INDUSTRY' module='Accounts'}</label>
                             </div>
             <div class="form-item">
