@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.33, created on 2022-05-09 14:18:07
+<?php /* Smarty version 2.6.33, created on 2022-05-09 14:59:32
          compiled from cache/themes/SuiteP/modules/Project/EditView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 52, false),array('function', 'sugar_translate', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 73, false),array('function', 'counter', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 98, false),array('function', 'html_options', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 135, false),array('function', 'sugar_getscript', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 402, false),array('function', 'sugar_getjspath', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 407, false),array('block', 'minify', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 89, false),array('modifier', 'strip_semicolon', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 91, false),array('modifier', 'default', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 179, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 52, false),array('function', 'sugar_translate', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 73, false),array('function', 'counter', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 98, false),array('function', 'html_options', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 135, false),array('function', 'sugar_getscript', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 434, false),array('function', 'sugar_getjspath', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 439, false),array('block', 'minify', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 89, false),array('modifier', 'strip_semicolon', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 91, false),array('modifier', 'default', 'cache/themes/SuiteP/modules/Project/EditView.tpl', 179, false),)), $this); ?>
 
 
 
@@ -543,6 +543,44 @@ _<?php echo $this->_tpl_vars['fields']['am_projecttemplates_project_1_name']['na
 </div>
 <div class="clear"></div>
 <div class="clear"></div>
+
+
+
+<div class="col-xs-12 col-sm-12 edit-view-row-item">
+
+
+<div class="col-xs-12 col-sm-2 label" data-label="LBL_PROJECT_HOURS">
+
+<?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_PROJECT_HOURS','module' => 'Project'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+
+<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="bigint" field="project_hours" colspan='3' >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<?php if (strlen ( $this->_tpl_vars['fields']['project_hours']['value'] ) <= 0): ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['project_hours']['default_value']); ?>
+<?php else: ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['project_hours']['value']); ?>
+<?php endif; ?>  
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['project_hours']['name']; ?>
+' 
+id='<?php echo $this->_tpl_vars['fields']['project_hours']['name']; ?>
+' size='30' 
+maxlength='8' 
+value='<?php echo $this->_tpl_vars['value']; ?>
+' title=''      >
+</div>
+
+<!-- [/hide] -->
+</div>
+<div class="clear"></div>
 </div>                    </div>
 </div>
 </div>
@@ -782,6 +820,9 @@ addToValidate(\'EditView\', \'am_projecttemplates_project_1_name\', \'relate\', 
 <?php echo '\' );
 addToValidate(\'EditView\', \'override_business_hours\', \'bool\', false,\''; ?>
 <?php echo smarty_function_sugar_translate(array('label' => 'LBL_OVERRIDE_BUSINESS_HOURS','module' => 'Project','for_js' => true), $this);?>
+<?php echo '\' );
+addToValidate(\'EditView\', \'project_hours\', \'bigint\', false,\''; ?>
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_PROJECT_HOURS','module' => 'Project','for_js' => true), $this);?>
 <?php echo '\' );
 addToValidate(\'EditView\', \'jjwg_maps_lat_c\', \'float\', false,\''; ?>
 <?php echo smarty_function_sugar_translate(array('label' => 'LBL_JJWG_MAPS_LAT','module' => 'Project','for_js' => true), $this);?>

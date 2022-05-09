@@ -62,6 +62,32 @@
     }
 	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 search_fields_basic">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+						<label for='project_hours_basic'> {sugar_translate label='LBL_PROJECT_HOURS' module='Project'}</label>
+					</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+		
+{if strlen($fields.project_hours_basic.value) <= 0}
+{assign var="value" value=$fields.project_hours_basic.default_value }
+{else}
+{assign var="value" value=$fields.project_hours_basic.value }
+{/if}  
+<input type='text' name='{$fields.project_hours_basic.name}' 
+    id='{$fields.project_hours_basic.name}' size='30' 
+    maxlength='8' 
+    value='{$value}' title=''      >
+		</div>
+		<div class="search-clear"></div>
+	</div>
+    
+      
+	{counter assign=index}
+	{math equation="left % right"
+   		  left=$index
+          right=$basicMaxColumns
+          assign=modVal
+    }
+	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 search_fields_basic">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
 						<label for='current_user_only_basic' >{sugar_translate label='LBL_CURRENT_USER_FILTER' module='Project'}</label>
 					</div>
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
