@@ -18,3 +18,7 @@ Fri May  6 17:41:54 2022 [3936601][1][FATAL] Mysqli_query failed.
 Fri May  6 17:41:54 2022 [3936601][1][FATAL] Executing repair query:  Query Failed: ALTER TABLE contacts   add COLUMN `custom_phone_no` varchar(24)  NULL: MySQL error 1060: Duplicate column name 'custom_phone_no'
 Fri May  6 17:41:54 2022 [3936601][1][FATAL] Exception handling in /var/www/html/crmwork/include/MVC/Controller/SugarController.php:409
 Fri May  6 17:41:54 2022 [3936601][1][FATAL] Exception in Controller: Database failure. Please refer to suitecrm.log for details.
+Mon May  9 16:30:43 2022 [540152][1][FATAL] Mysqli_query failed.
+Mon May  9 16:30:43 2022 [540152][1][FATAL] Executing repair query:  Query Failed: ALTER TABLE contacts   add COLUMN `identity` int(11)  NULL ,  add COLUMN `custom_contact_status` custom_contact_status  NULL: MySQL error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'custom_contact_status  NULL' at line 1
+Mon May  9 16:30:43 2022 [540152][1][FATAL] Exception handling in /var/www/html/crmwork/include/MVC/Controller/SugarController.php:409
+Mon May  9 16:30:43 2022 [540152][1][FATAL] Exception in Controller: Database failure. Please refer to suitecrm.log for details.

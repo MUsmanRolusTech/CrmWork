@@ -11,6 +11,28 @@ $dictionary['Contact']['fields']['custom_phone_no'] = array(
         'importable' => 'false',
 );
 
+$dictionary['Contact']['fields']['created_date_time'] = array(
+        'name' => 'created_date_time',
+        'vname' => 'LBL_CREATED_DATE_TIME',
+        'type' => 'datetime',
+);
+
+$dictionary['Contact']['fields']['identity'] = array(
+        'name' => 'identity',
+        'vname' => 'LBL_IDENTITY',
+        'type' => 'int',
+);
+
+$dictionary['Contact']['fields']['custom_contact_status'] = array(
+        'name' => 'custom_contact_status',
+        'vname' => 'LBL_CUSTOM_CONTACT_STATUS',
+        'type' => 'enum',
+        'options' => array(
+                'Approved' => 'Approved',
+                'Disapproved' => 'Disapproved',
+        ),
+);
+
 
  // created: 2022-05-05 16:58:43
 $dictionary['Contact']['fields']['jjwg_maps_lat_c']['inline_edit']=1;
