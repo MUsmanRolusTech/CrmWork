@@ -389,6 +389,38 @@ SUGAR.util.doWhen(
 </div>
 <div class="clear"></div>
 <div class="clear"></div>
+
+
+
+<div class="col-xs-12 col-sm-12 edit-view-row-item">
+
+
+<div class="col-xs-12 col-sm-2 label" data-label="LBL_PROJECT_HOURS">
+
+{minify}
+{capture name="label" assign="label"}{sugar_translate label='LBL_PROJECT_HOURS' module='Project'}{/capture}
+{$label|strip_semicolon}:
+
+{/minify}
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="bigint" field="project_hours" colspan='3' >
+{counter name="panelFieldCount" print=false}
+
+{if strlen($fields.project_hours.value) <= 0}
+{assign var="value" value=$fields.project_hours.default_value }
+{else}
+{assign var="value" value=$fields.project_hours.value }
+{/if}  
+<input type='text' name='{$fields.project_hours.name}' 
+id='{$fields.project_hours.name}' size='30' 
+maxlength='8' 
+value='{$value}' title=''      >
+</div>
+
+<!-- [/hide] -->
+</div>
+<div class="clear"></div>
 </div>                    </div>
 </div>
 </div>
@@ -555,6 +587,7 @@ addToValidate('EditView', 'total_actual_effort', 'int', false,'{/literal}{sugar_
 addToValidate('EditView', 'assigned_user_name', 'relate', false,'{/literal}{sugar_translate label='LBL_ASSIGNED_USER_NAME' module='Project' for_js=true}{literal}' );
 addToValidate('EditView', 'am_projecttemplates_project_1_name', 'relate', false,'{/literal}{sugar_translate label='LBL_AM_PROJECTTEMPLATES_PROJECT_1_FROM_AM_PROJECTTEMPLATES_TITLE' module='Project' for_js=true}{literal}' );
 addToValidate('EditView', 'override_business_hours', 'bool', false,'{/literal}{sugar_translate label='LBL_OVERRIDE_BUSINESS_HOURS' module='Project' for_js=true}{literal}' );
+addToValidate('EditView', 'project_hours', 'bigint', false,'{/literal}{sugar_translate label='LBL_PROJECT_HOURS' module='Project' for_js=true}{literal}' );
 addToValidate('EditView', 'jjwg_maps_lat_c', 'float', false,'{/literal}{sugar_translate label='LBL_JJWG_MAPS_LAT' module='Project' for_js=true}{literal}' );
 addToValidate('EditView', 'jjwg_maps_address_c', 'varchar', false,'{/literal}{sugar_translate label='LBL_JJWG_MAPS_ADDRESS' module='Project' for_js=true}{literal}' );
 addToValidate('EditView', 'jjwg_maps_geocode_status_c', 'varchar', false,'{/literal}{sugar_translate label='LBL_JJWG_MAPS_GEOCODE_STATUS' module='Project' for_js=true}{literal}' );

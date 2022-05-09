@@ -431,6 +431,14 @@
       'default' => '0',
       'comment' => '',
     ),
+    'project_hours' => 
+    array (
+      'name' => 'project_hours',
+      'vname' => 'LBL_PROJECT_HOURS',
+      'type' => 'bigint',
+      'len' => '8',
+      'importable' => 'false',
+    ),
     'jjwg_maps_lat_c' => 
     array (
       'inline_edit' => 1,
