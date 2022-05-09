@@ -1333,6 +1333,29 @@
       'len' => '24',
       'importable' => 'false',
     ),
+    'created_date_time' => 
+    array (
+      'name' => 'created_date_time',
+      'vname' => 'LBL_CREATED_DATE_TIME',
+      'type' => 'datetime',
+    ),
+    'identity' => 
+    array (
+      'name' => 'identity',
+      'vname' => 'LBL_IDENTITY',
+      'type' => 'int',
+    ),
+    'custom_contact_status' => 
+    array (
+      'name' => 'custom_contact_status',
+      'vname' => 'LBL_CUSTOM_CONTACT_STATUS',
+      'type' => 'enum',
+      'options' => 
+      array (
+        'Approved' => 'Approved',
+        'Disapproved' => 'Disapproved',
+      ),
+    ),
     'jjwg_maps_lat_c' => 
     array (
       'inline_edit' => 1,
