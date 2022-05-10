@@ -22,3 +22,4 @@ Mon May  9 16:30:43 2022 [540152][1][FATAL] Mysqli_query failed.
 Mon May  9 16:30:43 2022 [540152][1][FATAL] Executing repair query:  Query Failed: ALTER TABLE contacts   add COLUMN `identity` int(11)  NULL ,  add COLUMN `custom_contact_status` custom_contact_status  NULL: MySQL error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'custom_contact_status  NULL' at line 1
 Mon May  9 16:30:43 2022 [540152][1][FATAL] Exception handling in /var/www/html/crmwork/include/MVC/Controller/SugarController.php:409
 Mon May  9 16:30:43 2022 [540152][1][FATAL] Exception in Controller: Database failure. Please refer to suitecrm.log for details.
+Tue May 10 10:33:13 2022 [1752985][-none-][FATAL] FAILED LOGIN:attempts[1], ip[::1], username[admin@dmin123]
