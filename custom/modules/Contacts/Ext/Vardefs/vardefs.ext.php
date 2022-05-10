@@ -29,12 +29,8 @@ $dictionary['Contact']['fields']['custom_contact_status'] = array(
         'name' => 'custom_contact_status',
         'vname' => 'LBL_CUSTOM_CONTACT_STATUS',
         'type' => 'enum',
-        'options' => array(
-                'Approved' => 'Approved',
-                'Disapproved' => 'Disapproved',
-        ),
+        'options' => 'c_status_types',
 );
-
 
  // created: 2022-05-05 16:58:43
 $dictionary['Contact']['fields']['jjwg_maps_lat_c']['inline_edit']=1;

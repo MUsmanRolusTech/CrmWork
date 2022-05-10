@@ -26,8 +26,5 @@ $dictionary['Contact']['fields']['custom_contact_status'] = array(
         'name' => 'custom_contact_status',
         'vname' => 'LBL_CUSTOM_CONTACT_STATUS',
         'type' => 'enum',
-        'options' => array(
-                'Approved' => 'Approved',
-                'Disapproved' => 'Disapproved',
-        ),
+        'options' => 'c_status_types',
 );

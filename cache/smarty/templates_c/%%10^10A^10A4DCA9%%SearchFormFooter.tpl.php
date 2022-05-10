@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2022-05-10 15:14:37
+<?php /* Smarty version 2.6.33, created on 2022-05-10 15:46:25
          compiled from cache/themes/SuiteP/modules/Contacts/SearchFormFooter.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_getimagepath', 'cache/themes/SuiteP/modules/Contacts/SearchFormFooter.tpl', 11, false),array('function', 'sugar_translate', 'cache/themes/SuiteP/modules/Contacts/SearchFormFooter.tpl', 12, false),)), $this); ?>

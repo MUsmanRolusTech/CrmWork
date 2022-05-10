@@ -64,7 +64,7 @@ $searchdefs['Contacts'] = array(
             ),
             array('name' => 'favorites_only', 'label' => 'LBL_FAVORITES_FILTER', 'type' => 'bool',),
             array('name' => 'custom_identity', 'label' => 'LBL_CUSTOM_IDENTITY', 'type' => 'bool',),
-            array('name' => 'custom_contact_status', 'label' => 'LBL_CUSTOM_CONTACT_STATUS', 'type' => 'enum', 'options' => array('Approved' => 'Approved', 'Disapproved' => 'Disapproved',),),
+            array('name' => 'custom_contact_status', 'label' => 'LBL_CUSTOM_CONTACT_STATUS',),
         ),
         'advanced_search' =>
         array(
@@ -96,11 +96,6 @@ $searchdefs['Contacts'] = array(
             array(
                 'name' => 'custom_contact_status',
                 'label' => 'LBL_CUSTOM_CONTACT_STATUS',
-                'type' => 'enum',
-                'options' => array(
-                    'Approved' => 'Approved',
-                    'Disapproved' => 'Disapproved',
-                ),
             ),
             'phone' =>
             array(
