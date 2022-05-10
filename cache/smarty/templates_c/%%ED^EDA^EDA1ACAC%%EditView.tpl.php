@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.33, created on 2022-05-10 11:01:46
-         compiled from include/SugarFields/Fields/Text/EditView.tpl */ ?>
+<?php /* Smarty version 2.6.33, created on 2022-05-10 12:48:10
+         compiled from include/SugarFields/Fields/Bool/EditView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'sugarvar', 'include/SugarFields/Fields/Text/EditView.tpl', 42, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'sugarvar', 'include/SugarFields/Fields/Bool/EditView.tpl', 42, false),)), $this); ?>
 {*
 /**
  *
@@ -43,41 +43,26 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'sugarvar', 
  */
 
 *}
-{if empty(<?php echo smarty_function_sugarvar(array('key' => 'value','string' => true), $this);?>
-)}
-{assign var="value" value=<?php echo smarty_function_sugarvar(array('key' => 'default_value','string' => true), $this);?>
- }
+{if strval(<?php echo smarty_function_sugarvar(array('key' => 'value','stringFormat' => 'false'), $this);?>
+) == "1" || strval(<?php echo smarty_function_sugarvar(array('key' => 'value','stringFormat' => 'false'), $this);?>
+) == "yes" || strval(<?php echo smarty_function_sugarvar(array('key' => 'value','stringFormat' => 'false'), $this);?>
+) == "on"} 
+{assign var="checked" value='checked="checked"'}
 {else}
-{assign var="value" value=<?php echo smarty_function_sugarvar(array('key' => 'value','string' => true), $this);?>
- }
+{assign var="checked" value=""}
 {/if}
-
-
-<?php ob_start(); ?><?php echo smarty_function_sugarvar(array('key' => 'name'), $this);?>
-<?php $this->_smarty_vars['capture']['idname'] = ob_get_contents();  $this->assign('idname', ob_get_contents());ob_end_clean(); ?>
-<?php if (! empty ( $this->_tpl_vars['displayParams']['idName'] )): ?>
-    <?php $this->assign('idname', $this->_tpl_vars['displayParams']['idName']); ?>
-<?php endif; ?>
-
-
-<textarea  id='<?php echo $this->_tpl_vars['idname']; ?>
-' name='<?php echo $this->_tpl_vars['idname']; ?>
-'
-rows="<?php if (! empty ( $this->_tpl_vars['displayParams']['rows'] )): ?><?php echo $this->_tpl_vars['displayParams']['rows']; ?>
-<?php elseif (! empty ( $this->_tpl_vars['vardef']['rows'] )): ?><?php echo $this->_tpl_vars['vardef']['rows']; ?>
-<?php else: ?><?php echo 4; ?>
-<?php endif; ?>"
-cols="<?php if (! empty ( $this->_tpl_vars['displayParams']['cols'] )): ?><?php echo $this->_tpl_vars['displayParams']['cols']; ?>
-<?php elseif (! empty ( $this->_tpl_vars['vardef']['cols'] )): ?><?php echo $this->_tpl_vars['vardef']['cols']; ?>
-<?php else: ?><?php echo 60; ?>
-<?php endif; ?>"
-title='<?php echo $this->_tpl_vars['vardef']['help']; ?>
+<input type="hidden" name="<?php if (empty ( $this->_tpl_vars['displayParams']['idName'] )): ?><?php echo smarty_function_sugarvar(array('key' => 'name'), $this);?>
+<?php else: ?><?php echo $this->_tpl_vars['displayParams']['idName']; ?>
+<?php endif; ?>" value="0"> 
+<input type="checkbox" id="<?php if (empty ( $this->_tpl_vars['displayParams']['idName'] )): ?><?php echo smarty_function_sugarvar(array('key' => 'name'), $this);?>
+<?php else: ?><?php echo $this->_tpl_vars['displayParams']['idName']; ?>
+<?php endif; ?>" 
+name="<?php if (empty ( $this->_tpl_vars['displayParams']['idName'] )): ?><?php echo smarty_function_sugarvar(array('key' => 'name'), $this);?>
+<?php else: ?><?php echo $this->_tpl_vars['displayParams']['idName']; ?>
+<?php endif; ?>" 
+value="1" title='<?php echo $this->_tpl_vars['vardef']['help']; ?>
 ' tabindex="<?php echo $this->_tpl_vars['tabindex']; ?>
-" <?php echo $this->_tpl_vars['displayParams']['field']; ?>
-
-<?php if (! empty ( $this->_tpl_vars['displayParams']['accesskey'] )): ?> accesskey='<?php echo $this->_tpl_vars['displayParams']['accesskey']; ?>
-' <?php endif; ?> >{$value}</textarea>
-
-
-{literal}<?php echo $this->_tpl_vars['tinymce']; ?>
-{/literal}
+" <?php if (! empty ( $this->_tpl_vars['displayParams']['accesskey'] )): ?> accesskey='<?php echo $this->_tpl_vars['displayParams']['accesskey']; ?>
+' <?php endif; ?>
+{$checked} <?php echo $this->_tpl_vars['displayParams']['field']; ?>
+>

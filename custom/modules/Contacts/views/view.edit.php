@@ -60,6 +60,32 @@ class ContactsViewEdit extends ViewEdit
      */
     public function display()
     {
+        /**
+         * @Contact module customizations
+         * Hide custom fields from create view
+         */
+
+        global $sugar_config;
+        $new = empty($this->bean->id);
+
+        if ($new) { ?>
+
+            <script>
+                $(document).ready(function() {
+                    $('#created_date_time').parent().parent().parent().html('');
+                    $('#custom_identity').parent().parent().html('');
+                    $('#custom_contact_status').parent().parent().hide();
+                    $('#custom_phone_no').parent().parent().hide();
+                });
+            </script>
+
+        <?php }
+
+        /**
+         * @end here
+         */
+        ?>
+<?php
         $this->ev->process();
         if (
             !empty($_REQUEST['contact_name']) && !empty($_REQUEST['contact_id'])

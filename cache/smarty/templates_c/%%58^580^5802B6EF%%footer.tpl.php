@@ -1,7 +1,5 @@
-<?php /* Smarty version 2.6.33, created on 2022-05-10 11:01:46
-         compiled from themes/SuiteP/include/EditView/footer.tpl */ ?>
-<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'themes/SuiteP/include/EditView/footer.tpl', 54, false),)), $this); ?>
+<?php /* Smarty version 2.6.33, created on 2022-05-10 12:48:07
+         compiled from themes/SuiteP/include/SearchForm/tpls/footer.tpl */ ?>
 {*
 /**
  *
@@ -42,36 +40,30 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_inclu
  * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  */
 *}
-
-<script language="javascript">
-    var _form_id = '{$form_id}';
-    {literal}
-    SUGAR.util.doWhen(function(){
-        _form_id = (_form_id == '') ? 'EditView' : _form_id;
-        return document.getElementById(_form_id) != null;
-    }, SUGAR.themes.actionMenu);
-    {/literal}
-</script>
-{assign var='place' value="_FOOTER"} <!-- to be used for id for buttons with custom code in def files-->
-<?php if (empty ( $this->_tpl_vars['form']['button_location'] ) || $this->_tpl_vars['form']['button_location'] == 'bottom'): ?>
-
-<?php echo smarty_function_sugar_include(array('type' => 'smarty','file' => 'include/EditView/actions_buttons.tpl'), $this);?>
-
-
-<?php endif; ?>
 </form>
-<?php if ($this->_tpl_vars['externalJSFile']): ?>
-{sugar_include include=$externalJSFile}
-<?php endif; ?>
-
-{$set_focus_block}
-
-<?php if (isset ( $this->_tpl_vars['scriptBlocks'] )): ?>
-<!-- Begin Meta-Data Javascript -->
-<?php echo $this->_tpl_vars['scriptBlocks']; ?>
-
-<!-- End Meta-Data Javascript -->
-<?php endif; ?>
-<script>SUGAR.util.doWhen("document.getElementById('EditView') != null",
-        function(){ldelim}SUGAR.util.buildAccessKeyLabels();{rdelim});
+{literal}
+<script>
+function toggleInlineSearch()
+{
+    if (document.getElementById('inlineSavedSearch').style.display == 'none'){
+        document.getElementById('showSSDIV').value = 'yes'		
+        document.getElementById('inlineSavedSearch').style.display = '';
+{/literal}
+        document.getElementById('up_down_img').src='{sugar_getimagepath file="basic_search.gif"}';
+        document.getElementById('up_down_img').setAttribute('alt',"{sugar_translate label='LBL_ALT_HIDE_OPTIONS'}");
+{literal}
+    }else{
+{/literal}
+        document.getElementById('up_down_img').src='{sugar_getimagepath file="advanced_search.gif"}';
+        document.getElementById('up_down_img').setAttribute('alt',"{sugar_translate label='LBL_ALT_SHOW_OPTIONS'}");
+{literal}			
+        document.getElementById('showSSDIV').value = 'no';		
+        document.getElementById('inlineSavedSearch').style.display = 'none';		
+    }
+}
 </script>
+{/literal}
+
+{if $searchFormInPopup}
+    {include file='include/SearchForm/tpls/footerPopup.tpl'}
+{/if}

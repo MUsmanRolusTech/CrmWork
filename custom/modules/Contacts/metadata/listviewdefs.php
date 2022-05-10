@@ -115,6 +115,21 @@ $listViewDefs['Contacts'] = array(
         'label' => 'LBL_CUSTOM_PHONE_NO',
         'default' => true
     ),
+    'CREATED_DATE_TIME' => array(
+        'width' => '15%',
+        'label' => 'LBL_CREATED_DATE_TIME',
+        'default' => true
+    ),
+    'CUSTOM_IDENTITY' => array(
+        'width' => '15%',
+        'label' => 'LBL_CUSTOM_IDENTITY',
+        'default' => true
+    ),
+    'CUSTOM_CONTACT_STATUS' => array(
+        'width' => '15%',
+        'label' => 'LBL_CUSTOM_CONTACT_STATUS',
+        'default' => true
+    ),
     'DEPARTMENT' => array(
         'width' => '10',
         'label' => 'LBL_DEPARTMENT'

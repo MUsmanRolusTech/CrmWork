@@ -1338,11 +1338,13 @@
       'name' => 'created_date_time',
       'vname' => 'LBL_CREATED_DATE_TIME',
       'type' => 'datetime',
+      'enable_range_search' => true,
+      'options' => 'date_range_search_dom',
     ),
-    'identity' => 
+    'custom_identity' => 
     array (
-      'name' => 'identity',
-      'vname' => 'LBL_IDENTITY',
+      'name' => 'custom_identity',
+      'vname' => 'LBL_CUSTOM_IDENTITY',
       'type' => 'int',
     ),
     'custom_contact_status' => 

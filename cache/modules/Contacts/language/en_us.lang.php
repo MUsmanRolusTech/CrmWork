@@ -1,5 +1,5 @@
 <?php
-// created: 2022-05-10 11:01:44
+// created: 2022-05-10 12:48:04
 $mod_strings = array (
   'LBL_ID' => 'ID:',
   'LBL_DATE_ENTERED' => 'Date Created',
@@ -194,5 +194,5 @@ $mod_strings = array (
   'LBL_CUSTOM_PHONE_NO' => 'Home Phone',
   'LBL_CREATED_DATE_TIME' => 'Created at',
   'LBL_CUSTOM_CONTACT_STATUS' => 'Membership',
-  'LBL_IDENTITY' => 'Identity',
+  'LBL_CUSTOM_IDENTITY' => 'Identity',
 );

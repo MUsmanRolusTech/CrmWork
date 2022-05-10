@@ -168,8 +168,8 @@ $viewdefs['Contacts'] =
             ),
             2 =>
             array(
-              'name' => 'identity',
-              'label' => 'LBL_IDENTITY',
+              'name' => 'custom_identity',
+              'label' => 'LBL_CUSTOM_IDENTITY',
             ),
             3 =>
             array(
