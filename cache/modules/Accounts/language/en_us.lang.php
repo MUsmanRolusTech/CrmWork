@@ -1,5 +1,5 @@
 <?php
-// created: 2022-05-11 14:42:50
+// created: 2022-05-11 14:45:57
 $mod_strings = array (
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Date Created:',
@@ -139,6 +139,8 @@ $mod_strings = array (
   'LBL_CONTACT_USER_ID' => 'contact user id',
   'LBL_MAIN_CONTACT_ID_CONTACT_ID' => 'Main Contact ID (related Contact ID)',
   'LBL_MAIN_CONTACT_ID' => 'Main Contact ID',
+  'LBL_EVENT_RELATE_FIELD_FP_EVENTS_ID' => 'Event Relate Field (related  ID)',
+  'LBL_EVENT_RELATE_FIELD' => 'Event Relate Field',
   'LBL_CUSTOM_MOBILE' => 'Mobile No',
   'LBL_RELATE_FIELD_CONTACT_ID' => 'Contact User',
   'LBL_CUSTOM_SUR_NAME' => 'Sur Name',

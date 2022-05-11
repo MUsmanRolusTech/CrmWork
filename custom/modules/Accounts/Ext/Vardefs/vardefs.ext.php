@@ -58,6 +58,12 @@ $dictionary['Account']['fields']['contact_user_id_c']['labelValue']='contact use
 
  
 
+ // created: 2022-05-11 14:45:57
+$dictionary['Account']['fields']['event_relate_field_c']['inline_edit']='1';
+$dictionary['Account']['fields']['event_relate_field_c']['labelValue']='Event Relate Field';
+
+ 
+
  // created: 2022-05-05 16:58:43
 $dictionary['Account']['fields']['jjwg_maps_geocode_status_c']['inline_edit']=1;
 
@@ -87,6 +93,11 @@ $dictionary['Account']['fields']['contact_id_c']['inline_edit']=1;
  // created: 2022-05-10 18:22:41
 $dictionary['Account']['fields']['main_contact_id_c']['inline_edit']='1';
 $dictionary['Account']['fields']['main_contact_id_c']['labelValue']='Main Contact ID';
+
+ 
+
+ // created: 2022-05-11 14:45:57
+$dictionary['Account']['fields']['fp_events_id_c']['inline_edit']=1;
 
  
 
