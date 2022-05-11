@@ -32,6 +32,25 @@ $dictionary['Contact']['fields']['custom_contact_status'] = array(
         'options' => 'c_status_types',
 );
 
+$dictionary['Contact']['fields']['account_name']['join_link_name'] = 'accounts_contacts_link';
+
+$dictionary['Contact']['fields']['account_employees_c'] = array (
+	'name' => 'account_employees_c',
+	'id_name' => 'account_id',
+	'type' => 'relate',
+	'rname' => 'employees',
+	'vname' => 'LBL_ACCOUNT_EMPLOYEES',
+	'link' => 'accounts',
+	'module' => 'Accounts',
+	'source' => 'non-db',
+	'dbType' => 'non-db',
+	'studio' => 'visible',
+	'massupdate' => false,
+	'join_name'=>'accounts',
+	'join_link_name'=>'accounts_contacts_link',
+);
+
+
  // created: 2022-05-05 16:58:43
 $dictionary['Contact']['fields']['jjwg_maps_lat_c']['inline_edit']=1;
 

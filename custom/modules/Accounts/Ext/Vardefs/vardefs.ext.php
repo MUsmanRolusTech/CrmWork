@@ -10,6 +10,37 @@ $dictionary['Account']['fields']['custom_mobile'] = array(
         'importable' => 'false',
 );
 
+$dictionary['Account']['fields']['custom_sur_name'] = array(
+        'name' => 'custom_sur_name',
+        'vname' => 'LBL_CUSTOM_SUR_NAME',
+        'type' => 'char',
+        'len' => '255',
+        'importable' => 'true',
+);
+
+$dictionary['Account']['fields']['relate_field_contact_id'] = array(
+        'name' => 'relate_field_contact_id',
+        'vname' => 'LBL_RELATE_FIELD_CONTACT_ID',
+        'rname' => 'name',
+        'type' => 'relate',
+        'reportable' => false,
+        'source' => 'non-db',
+        'table' => 'accounts',
+        'id_name' => 'csm_contact_id',
+        'module' => 'Accounts',
+);
+
+$dictionary['Account']['fields']['csm_contact_id'] = array(
+        'name' => 'csm_contact_id',
+        'vname' => 'LBL_CSM_CONTACT_ID',
+        'table' => 'accounts',
+        'module' => 'Accounts',
+        'reportable' => true,
+        'isnull' => 'false',
+        'type' => 'id',
+        'audited' => true,
+        'duplicate_merge' => 'disabled',
+);
 
  // created: 2022-05-05 16:58:43
 $dictionary['Account']['fields']['jjwg_maps_lat_c']['inline_edit']=1;
@@ -24,6 +55,12 @@ $dictionary['Account']['fields']['jjwg_maps_address_c']['inline_edit']=1;
  // created: 2022-05-10 17:01:22
 $dictionary['Account']['fields']['contact_user_id_c']['inline_edit']='';
 $dictionary['Account']['fields']['contact_user_id_c']['labelValue']='contact user id';
+
+ 
+
+ // created: 2022-05-11 14:45:57
+$dictionary['Account']['fields']['event_relate_field_c']['inline_edit']='1';
+$dictionary['Account']['fields']['event_relate_field_c']['labelValue']='Event Relate Field';
 
  
 
@@ -56,6 +93,11 @@ $dictionary['Account']['fields']['contact_id_c']['inline_edit']=1;
  // created: 2022-05-10 18:22:41
 $dictionary['Account']['fields']['main_contact_id_c']['inline_edit']='1';
 $dictionary['Account']['fields']['main_contact_id_c']['labelValue']='Main Contact ID';
+
+ 
+
+ // created: 2022-05-11 14:45:57
+$dictionary['Account']['fields']['fp_events_id_c']['inline_edit']=1;
 
  
 
