@@ -243,6 +243,21 @@ array(
             'studio' => 'false',
             'label' => 'LBL_EMAIL_ADDRESS',
           ),
+          1 =>
+          array(
+            'name' => 'created_date_time',
+            'label' => 'LBL_CREATED_DATE_TIME',
+          ),
+          2 =>
+          array(
+            'name' => 'custom_identity',
+            'label' => 'LBL_CUSTOM_IDENTITY',
+          ),
+          3 =>
+          array(
+            'name' => 'custom_contact_status',
+            'label' => 'LBL_CUSTOM_CONTACT_STATUS',
+          ),
         ),
         5 =>
         array(

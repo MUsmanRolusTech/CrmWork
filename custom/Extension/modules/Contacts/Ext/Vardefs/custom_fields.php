@@ -12,11 +12,13 @@ $dictionary['Contact']['fields']['created_date_time'] = array(
         'name' => 'created_date_time',
         'vname' => 'LBL_CREATED_DATE_TIME',
         'type' => 'datetime',
+        'enable_range_search' => true,
+        'options' => 'date_range_search_dom',
 );
 
-$dictionary['Contact']['fields']['identity'] = array(
-        'name' => 'identity',
-        'vname' => 'LBL_IDENTITY',
+$dictionary['Contact']['fields']['custom_identity'] = array(
+        'name' => 'custom_identity',
+        'vname' => 'LBL_CUSTOM_IDENTITY',
         'type' => 'int',
 );
 
@@ -24,8 +26,5 @@ $dictionary['Contact']['fields']['custom_contact_status'] = array(
         'name' => 'custom_contact_status',
         'vname' => 'LBL_CUSTOM_CONTACT_STATUS',
         'type' => 'enum',
-        'options' => array(
-                'Approved' => 'Approved',
-                'Disapproved' => 'Disapproved',
-        ),
+        'options' => 'c_status_types',
 );

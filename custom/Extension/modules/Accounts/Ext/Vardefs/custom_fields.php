@@ -6,4 +6,3 @@ $dictionary['Account']['fields']['custom_mobile'] = array(
         'len' => '510',
         'importable' => 'false',
 );
-?>
