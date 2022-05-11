@@ -1,0 +1,4 @@
+Wed May 11 11:32:47 2022 [915971][1][FATAL] Mysqli_query failed.
+Wed May 11 11:32:47 2022 [915971][1][FATAL] Executing repair query:  Query Failed: ALTER TABLE accounts   add COLUMN `custom_sur_name` char(255)  NULL: MySQL error 1060: Duplicate column name 'custom_sur_name'
+Wed May 11 11:32:47 2022 [915971][1][FATAL] Exception handling in /var/www/html/crmwork/include/MVC/Controller/SugarController.php:409
+Wed May 11 11:32:47 2022 [915971][1][FATAL] Exception in Controller: Database failure. Please refer to suitecrm.log for details.
