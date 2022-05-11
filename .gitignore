@@ -97,7 +97,7 @@ tests/_output/*
 #Ignore browserstack
 BrowserStackLocal
 browserstack.err
-cache/*
+# cache/*
 #custom/**/
 custom/application/Ext/
 .sass-cache/
