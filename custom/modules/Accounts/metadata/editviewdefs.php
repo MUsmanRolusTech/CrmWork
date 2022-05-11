@@ -67,6 +67,11 @@ array (
           ),
           1 => 
           array (
+            'name' => 'custom_sur_name',
+            'label' => 'LBL_CUSTOM_SUR_NAME',
+          ),
+          2 => 
+          array (
             'name' => 'phone_office',
             'label' => 'LBL_PHONE_OFFICE',
           ),
@@ -140,7 +145,10 @@ array (
             'name' => 'assigned_user_name',
             'label' => 'LBL_ASSIGNED_TO',
           ),
-          1 => '',
+          1 => array(
+            'name' => 'relate_field_contact_id',
+            'label' => 'LBL_RELATE_FIELD_CONTACT_ID',
+          ),
         ),
       ),
       'LBL_PANEL_ADVANCED' => 

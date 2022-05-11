@@ -88,6 +88,11 @@ array (
           ),
           1 => 
           array (
+            'name' => 'custom_sur_name',
+            'label' => 'LBL_CUSTOM_SUR_NAME',
+          ),
+          2 => 
+          array (
             'name' => 'phone_office',
             'comment' => 'The office phone number',
             'label' => 'LBL_PHONE_OFFICE',
