@@ -166,7 +166,11 @@ array (
             'name' => 'assigned_user_name',
             'label' => 'LBL_ASSIGNED_TO',
           ),
-          1 => '',
+          1 => 
+          array (
+            'name' => 'relate_field_contact_id',
+            'label' => 'LBL_RELATE_FIELD_CONTACT_ID',
+          ),
         ),
       ),
       'LBL_PANEL_ADVANCED' => 
