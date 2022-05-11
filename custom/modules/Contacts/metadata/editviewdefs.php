@@ -222,6 +222,11 @@ $viewdefs['Contacts'] =
               'name' => 'assigned_user_name',
               'label' => 'LBL_ASSIGNED_TO_NAME',
             ),
+            1 =>
+            array(
+              'name' => 'account_employees_c',
+              'label' => 'LBL_ACCOUNT_EMPLOYEES',
+            ),
           ),
         ),
         'LBL_PANEL_ADVANCED' =>
