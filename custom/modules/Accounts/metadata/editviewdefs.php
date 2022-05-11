@@ -48,6 +48,7 @@ array (
           'panelDefault' => 'expanded',
         ),
       ),
+      'syncDetailEditViews' => true,
     ),
     'panels' => 
     array (
@@ -92,11 +93,7 @@ array (
             'studio' => 'false',
             'label' => 'LBL_EMAIL',
           ),
-          1 => 
-          array (
-            'name' => 'jjwg_maps_address_c',
-            'label' => 'LBL_JJWG_MAPS_ADDRESS',
-          ),
+          1 => '',
         ),
         3 => 
         array (
@@ -143,6 +140,7 @@ array (
             'name' => 'assigned_user_name',
             'label' => 'LBL_ASSIGNED_TO',
           ),
+          1 => '',
         ),
       ),
       'LBL_PANEL_ADVANCED' => 
@@ -160,7 +158,6 @@ array (
         2 => 
         array (
           0 => 'parent_name',
-          1 => 'custom_mobile',
         ),
         3 => 
         array (
