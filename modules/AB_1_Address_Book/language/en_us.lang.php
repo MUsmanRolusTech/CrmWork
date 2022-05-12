@@ -75,4 +75,6 @@ $mod_strings = array (
   'LBL_AB_1_ADDRESS_BOOK_SUBPANEL_TITLE' => 'Address Book',
   'LBL_NEW_FORM_TITLE' => 'New Address Book',
   'LBL_MOBILE_NO' => 'Mobile No',
+  'LBL_OFFICE_NO' => 'Office No',
+  'LBL_AB_1_ADDRESS_BOOK_ACCOUNTS_1_FROM_ACCOUNTS_TITLE' => 'Accounts',
 );
