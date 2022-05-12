@@ -1,10 +1,15 @@
-Thu May  5 16:58:44 2022 [841898][1][SECURITY] Setting logger_file_name to ''.
-Thu May  5 16:58:44 2022 [841898][1][SECURITY] Invalid ext  logger_file_ext : ''.
-Thu May  5 16:58:44 2022 [841898][1][SECURITY] Setting logger_file_ext to ''.
-Thu May  5 16:58:44 2022 [841898][1][SECURITY] Log file extension can't be blank.
-Thu May  5 16:58:44 2022 [841898][1][SECURITY] Log file extension can't be blank.
-Thu May  5 16:58:44 2022 [841898][1][SECURITY] Setting logger_file_name to ''.
-Thu May  5 16:58:44 2022 [841898][1][SECURITY] Invalid ext  logger_file_ext : ''.
-Thu May  5 16:58:44 2022 [841898][1][SECURITY] Setting logger_file_ext to ''.
-Thu May  5 16:58:44 2022 [841898][1][SECURITY] Log file extension can't be blank.
-Thu May  5 16:58:44 2022 [841898][1][SECURITY] Log file extension can't be blank.
+Wed May 11 11:32:47 2022 [915971][1][FATAL] Mysqli_query failed.
+Wed May 11 11:32:47 2022 [915971][1][FATAL] Executing repair query:  Query Failed: ALTER TABLE accounts   add COLUMN `custom_sur_name` char(255)  NULL: MySQL error 1060: Duplicate column name 'custom_sur_name'
+Wed May 11 11:32:47 2022 [915971][1][FATAL] Exception handling in /var/www/html/crmwork/include/MVC/Controller/SugarController.php:409
+Wed May 11 11:32:47 2022 [915971][1][FATAL] Exception in Controller: Database failure. Please refer to suitecrm.log for details.
+Wed May 11 17:53:32 2022 [2908502][1][FATAL] ERROR: There was an error during your upload, please contact an administrator for help.
+Wed May 11 17:53:51 2022 [2622945][1][FATAL] ERROR: There was an error during your upload, please contact an administrator for help.
+Thu May 12 11:07:42 2022 [1063056][1][FATAL] Bean file does not exist in path: modules/AB_1_Address_Book/AB_1_Address_Book.php
+Thu May 12 11:07:42 2022 [1063056][1][FATAL] Bean file does not exist in path: modules/AB_1_Address_Book/AB_1_Address_Book.php
+Thu May 12 11:18:29 2022 [1091384][1][FATAL] ERROR: There was an error during your upload, please contact an administrator for help.
+Thu May 12 11:19:47 2022 [2999832][1][FATAL] Action = editLayout with unknown view=SearchView
+Thu May 12 11:20:01 2022 [1063051][1][FATAL] Action = editLayout with unknown view=SearchView
+Thu May 12 11:22:04 2022 [4035932][1][FATAL] UndeployedMetaDataImplementation->getFileName(): view type custom is not recognized
+Thu May 12 11:22:04 2022 [4035932][1][FATAL] UndeployedMetaDataImplementation->getFileName(): view type custom is not recognized
+Thu May 12 11:22:10 2022 [4035932][1][FATAL] UndeployedMetaDataImplementation->getFileName(): view type custom is not recognized
+Thu May 12 11:22:10 2022 [4035932][1][FATAL] UndeployedMetaDataImplementation->getFileName(): view type custom is not recognized
