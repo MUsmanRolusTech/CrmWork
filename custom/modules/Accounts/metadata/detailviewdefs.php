@@ -172,8 +172,8 @@ array (
             'label' => 'LBL_RELATE_FIELD_CONTACT_ID',
           ),
           2 => array(
-            'name' => 'ab_1_address_book_acounts_1_name',
-            'label' => 'LBL_AB_1_ADDRESS_BOOK_ACCOUNTS_1_FROM_AB_1_ADDRESS_BOOK_TITLE',
+            'name' => 'ab_1_address_book_accounts_name',
+            'label' => 'LBL_AB_1_ADDRESS_BOOK_ACCOUNTS_FROM_ADDRESS_BOOK_TITLE',
           ),
         ),
       ),

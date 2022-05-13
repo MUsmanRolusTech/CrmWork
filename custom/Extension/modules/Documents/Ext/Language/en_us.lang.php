@@ -5,7 +5,7 @@
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
  * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
- * Copyright (C) 2011 - 2018 SalesAgility Ltd.
+ * Copyright (C) 2011 - 2019 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Affero General Public License version 3 as published by the
@@ -37,45 +37,9 @@
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
  * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  */
-$mod_strings = array (
-  'LBL_ASSIGNED_TO_ID' => 'Assigned User Id',
-  'LBL_ASSIGNED_TO_NAME' => 'Assigned to',
-  'LBL_SECURITYGROUPS' => 'Security Groups',
-  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Security Groups',
-  'LBL_ID' => 'ID',
-  'LBL_DATE_ENTERED' => 'Date Created',
-  'LBL_DATE_MODIFIED' => 'Date Modified',
-  'LBL_MODIFIED' => 'Modified By',
-  'LBL_MODIFIED_NAME' => 'Modified By Name',
-  'LBL_CREATED' => 'Created By',
-  'LBL_DESCRIPTION' => 'Description',
-  'LBL_DELETED' => 'Deleted',
-  'LBL_NAME' => 'Name',
-  'LBL_CREATED_USER' => 'Created by User',
-  'LBL_MODIFIED_USER' => 'Modified by User',
-  'LBL_LIST_NAME' => 'Name',
-  'LBL_EDIT_BUTTON' => 'Edit',
-  'LBL_REMOVE' => 'Remove',
-  'LBL_ASCENDING' => 'Ascending',
-  'LBL_DESCENDING' => 'Descending',
-  'LBL_OPT_IN' => 'Opt In',
-  'LBL_OPT_IN_PENDING_EMAIL_NOT_SENT' => 'Pending Confirm opt in, Confirm opt in not sent',
-  'LBL_OPT_IN_PENDING_EMAIL_SENT' => 'Pending Confirm opt in, Confirm opt in sent',
-  'LBL_OPT_IN_CONFIRMED' => 'Opted in',
-  'LBL_LIST_FORM_TITLE' => 'Address Book List',
-  'LBL_MODULE_NAME' => 'Address Book',
-  'LBL_MODULE_TITLE' => 'Address Book',
-  'LBL_HOMEPAGE_TITLE' => 'My Address Book',
-  'LNK_NEW_RECORD' => 'Create Address Book',
-  'LNK_LIST' => 'View Address Book',
-  'LNK_IMPORT_AB_1_ADDRESS_BOOK' => 'Import Address Book',
-  'LBL_SEARCH_FORM_TITLE' => 'Search Address Book',
-  'LBL_HISTORY_SUBPANEL_TITLE' => 'View History',
-  'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Activities',
-  'LBL_AB_1_ADDRESS_BOOK_SUBPANEL_TITLE' => 'Address Book',
-  'LBL_NEW_FORM_TITLE' => 'New Address Book',
-  'LBL_MOBILE_NO' => 'Mobile No',
-  'LBL_OFFICE_NO' => 'Office No',
-  'LBL_AB_1_ADDRESS_BOOK_ACCOUNTS_FROM_ACCOUNTS_TITLE' => 'Accounts',
-  'LBL_AB_1_ADDRESS_BOOK_DOCUMENTS_FROM_DOCUMENTS_TITLE' => 'Documents'
-);
+
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
+
+$mod_strings['LBL_AB_1_ADDRESS_BOOK_DOCUMENTS_FROM_ADDRESS_BOOK_TITLE'] = 'Address Book';
