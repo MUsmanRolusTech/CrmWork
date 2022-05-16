@@ -1,7 +1,4 @@
-<?php 
- //WARNING: The contents of this file are auto-generated
-
-
+<?php
 
 $dictionary['Lead']['fields']['relate_ab_1_address_book_id'] = array(
     'name' => 'relate_ab_1_address_book_id',
@@ -28,25 +25,4 @@ $dictionary['Lead']['fields']['ab_1_address_book_id'] = array(
     'audited' => true,
     'duplicate_merge' => 'disabled',
 );
-
-
- // created: 2022-05-05 16:58:43
-$dictionary['Lead']['fields']['jjwg_maps_lat_c']['inline_edit']=1;
-
- 
-
- // created: 2022-05-05 16:58:43
-$dictionary['Lead']['fields']['jjwg_maps_address_c']['inline_edit']=1;
-
- 
-
- // created: 2022-05-05 16:58:43
-$dictionary['Lead']['fields']['jjwg_maps_geocode_status_c']['inline_edit']=1;
-
- 
-
- // created: 2022-05-05 16:58:43
-$dictionary['Lead']['fields']['jjwg_maps_lng_c']['inline_edit']=1;
-
- 
 ?>

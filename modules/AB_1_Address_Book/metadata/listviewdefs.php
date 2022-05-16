@@ -16,6 +16,13 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'OFFICE_NO' => 
+  array (
+    'type' => 'phone',
+    'label' => 'LBL_OFFICE_NO',
+    'width' => '10%',
+    'default' => true,
+  ),
   'DESCRIPTION' => 
   array (
     'type' => 'text',
