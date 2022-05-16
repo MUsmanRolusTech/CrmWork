@@ -8,5 +8,15 @@ $layout_defs["AB_1_Address_Book"]["subpanel_setup"]['ab_1_address_book_accounts'
     'sort_by' => 'ab_1_address_book_id',
     'title_key' => 'LBL_AB_1_ADDRESS_BOOK_ACCOUNTS_FROM_ACCOUNTS_TITLE',
     'get_subpanel_data' => 'ab_1_address_book_accounts',
-    'top_buttons' => array(),
+    'top_buttons' =>   array(
+        0 =>
+        array(
+            'widget_class' => 'SubPanelTopButtonQuickCreate',
+        ),
+        1 =>
+        array(
+            'widget_class' => 'SubPanelTopSelectButton',
+            'mode' => 'MultiSelect',
+        ),
+    ),
 );
