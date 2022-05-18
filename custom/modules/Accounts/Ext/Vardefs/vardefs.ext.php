@@ -89,6 +89,24 @@ $dictionary['Account']['fields']['csm_contact_id'] = array(
         'duplicate_merge' => 'disabled',
 );
 
+$dictionary['Account']['fields']['custom_status'] = array(
+        'name' => 'custom_status',
+        'vname' => 'LBL_CUSTOM_STATUS',
+        'type' => 'bool',
+        'len' => '1',
+        'default' => '0',
+        'required' => true,
+);
+
+$dictionary['Account']['fields']['crm_t_status'] = array(
+        'name' => 'crm_t_status',
+        'vname' => 'LBL_CRM_T_STATUS',
+        'type' => 'bool',
+        'len' => '1',
+        'default' => '0',
+        'required' => true,
+);
+
 // created: 2022-05-11 15:17:35
 $dictionary["Account"]["fields"]["accounts_fp_events_1"] = array (
   'name' => 'accounts_fp_events_1',

@@ -184,10 +184,7 @@ array (
             'label' => 'LBL_ASSIGNED_TO_NAME',
           ),
           1 => 
-          array (
-            'name' => 'account_employees_c',
-            'label' => 'LBL_ACCOUNT_EMPLOYEES',
-          ),
+          array (),
         ),
         8 => 
         array (

@@ -1,8 +1,4 @@
 <?php
-if (!defined('sugarEntry') || !sugarEntry) {
-    die('Not A Valid Entry Point');
-}
-
 /**
  *
  * SugarCRM Community Edition is a customer relationship management program developed by
@@ -41,46 +37,6 @@ if (!defined('sugarEntry') || !sugarEntry) {
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
  * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  */
-
-require_once 'modules/Contacts/views/view.edit.php';
-
-class CustomContactsViewEdit extends ContactsViewEdit
-{
-    /**
-     * @see SugarView::display()
-     *
-     * We are overridding the display method to manipulate the sectionPanels.
-     * If portal is not enabled then don't show the Portal Information panel.
-     */
-    public function display()
-    {
-        /**
-         * @Contact module customizations
-         * Hide custom fields from create view
-         */
-
-        global $sugar_config;
-        $new = empty($this->bean->id);
-
-        if ($new) { ?>
-
-            <script>
-                $(document).ready(function() {
-                    $('#created_date_time').parent().parent().parent().html('');
-                    $('#custom_identity').parent().parent().html('');
-                    $('#custom_contact_status').parent().parent().html('');
-                    $('#custom_phone_no').parent().parent().html('');
-                });
-            </script>
-
-        <?php }
-
-        parent::display();
-
-        /**
-         * @end here
-         */
-        ?>
-<?php
-    }
-}
+/**
+ * This file adds support for studio
+ */

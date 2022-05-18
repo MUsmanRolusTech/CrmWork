@@ -1,8 +1,4 @@
 <?php
-if (!defined('sugarEntry') || !sugarEntry) {
-    die('Not A Valid Entry Point');
-}
-
 /**
  *
  * SugarCRM Community Edition is a customer relationship management program developed by
@@ -42,45 +38,28 @@ if (!defined('sugarEntry') || !sugarEntry) {
  * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  */
 
-require_once 'modules/Contacts/views/view.edit.php';
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
 
-class CustomContactsViewEdit extends ContactsViewEdit
-{
-    /**
-     * @see SugarView::display()
-     *
-     * We are overridding the display method to manipulate the sectionPanels.
-     * If portal is not enabled then don't show the Portal Information panel.
-     */
-    public function display()
+require_once('include/Dashlets/DashletGeneric.php');
+require_once('modules/SB_T_Sub_Task/SB_T_Sub_Task.php');
+
+class SB_T_Sub_TaskDashlet extends DashletGeneric {
+    function __construct($id, $def = null)
     {
-        /**
-         * @Contact module customizations
-         * Hide custom fields from create view
-         */
+        global $current_user, $app_strings;
+        require('modules/SB_T_Sub_Task/metadata/dashletviewdefs.php');
 
-        global $sugar_config;
-        $new = empty($this->bean->id);
+        parent::__construct($id, $def);
 
-        if ($new) { ?>
+        if (empty($def['title'])) {
+            $this->title = translate('LBL_HOMEPAGE_TITLE', 'SB_T_Sub_Task');
+        }
 
-            <script>
-                $(document).ready(function() {
-                    $('#created_date_time').parent().parent().parent().html('');
-                    $('#custom_identity').parent().parent().html('');
-                    $('#custom_contact_status').parent().parent().html('');
-                    $('#custom_phone_no').parent().parent().html('');
-                });
-            </script>
+        $this->searchFields = $dashletData['SB_T_Sub_TaskDashlet']['searchFields'];
+        $this->columns = $dashletData['SB_T_Sub_TaskDashlet']['columns'];
 
-        <?php }
-
-        parent::display();
-
-        /**
-         * @end here
-         */
-        ?>
-<?php
+        $this->seedBean = new SB_T_Sub_Task();        
     }
 }

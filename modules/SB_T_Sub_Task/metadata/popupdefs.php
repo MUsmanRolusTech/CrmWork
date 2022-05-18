@@ -1,8 +1,4 @@
 <?php
-if (!defined('sugarEntry') || !sugarEntry) {
-    die('Not A Valid Entry Point');
-}
-
 /**
  *
  * SugarCRM Community Edition is a customer relationship management program developed by
@@ -42,45 +38,20 @@ if (!defined('sugarEntry') || !sugarEntry) {
  * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  */
 
-require_once 'modules/Contacts/views/view.edit.php';
-
-class CustomContactsViewEdit extends ContactsViewEdit
-{
-    /**
-     * @see SugarView::display()
-     *
-     * We are overridding the display method to manipulate the sectionPanels.
-     * If portal is not enabled then don't show the Portal Information panel.
-     */
-    public function display()
-    {
-        /**
-         * @Contact module customizations
-         * Hide custom fields from create view
-         */
-
-        global $sugar_config;
-        $new = empty($this->bean->id);
-
-        if ($new) { ?>
-
-            <script>
-                $(document).ready(function() {
-                    $('#created_date_time').parent().parent().parent().html('');
-                    $('#custom_identity').parent().parent().html('');
-                    $('#custom_contact_status').parent().parent().html('');
-                    $('#custom_phone_no').parent().parent().html('');
-                });
-            </script>
-
-        <?php }
-
-        parent::display();
-
-        /**
-         * @end here
-         */
-        ?>
-<?php
-    }
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
 }
+
+$module_name = 'SB_T_Sub_Task';
+$object_name = 'SB_T_Sub_Task';
+$_module_name = 'sb_t_sub_task';
+$popupMeta = array(
+    'moduleMain' => $module_name,
+    'varName' => $object_name,
+    'orderBy' => $_module_name . '.name',
+    'whereClauses' => array(
+        'name' => $_module_name . '.name',
+    ),
+    'searchInputs' => array($_module_name . '_number', 'name', 'priority', 'status'),
+
+);

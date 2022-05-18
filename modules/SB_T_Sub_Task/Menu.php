@@ -1,8 +1,4 @@
 <?php
-if (!defined('sugarEntry') || !sugarEntry) {
-    die('Not A Valid Entry Point');
-}
-
 /**
  *
  * SugarCRM Community Edition is a customer relationship management program developed by
@@ -42,45 +38,18 @@ if (!defined('sugarEntry') || !sugarEntry) {
  * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  */
 
-require_once 'modules/Contacts/views/view.edit.php';
+ if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
 
-class CustomContactsViewEdit extends ContactsViewEdit
-{
-    /**
-     * @see SugarView::display()
-     *
-     * We are overridding the display method to manipulate the sectionPanels.
-     * If portal is not enabled then don't show the Portal Information panel.
-     */
-    public function display()
-    {
-        /**
-         * @Contact module customizations
-         * Hide custom fields from create view
-         */
-
-        global $sugar_config;
-        $new = empty($this->bean->id);
-
-        if ($new) { ?>
-
-            <script>
-                $(document).ready(function() {
-                    $('#created_date_time').parent().parent().parent().html('');
-                    $('#custom_identity').parent().parent().html('');
-                    $('#custom_contact_status').parent().parent().html('');
-                    $('#custom_phone_no').parent().parent().html('');
-                });
-            </script>
-
-        <?php }
-
-        parent::display();
-
-        /**
-         * @end here
-         */
-        ?>
-<?php
-    }
+global $mod_strings, $app_strings, $sugar_config;
+ 
+if(ACLController::checkAccess('SB_T_Sub_Task', 'edit', true)){
+    $module_menu[]=array('index.php?module=SB_T_Sub_Task&action=EditView&return_module=SB_T_Sub_Task&return_action=DetailView', $mod_strings['LNK_NEW_RECORD'], 'Add', 'SB_T_Sub_Task');
+}
+if(ACLController::checkAccess('SB_T_Sub_Task', 'list', true)){
+    $module_menu[]=array('index.php?module=SB_T_Sub_Task&action=index&return_module=SB_T_Sub_Task&return_action=DetailView', $mod_strings['LNK_LIST'],'View', 'SB_T_Sub_Task');
+}
+if(ACLController::checkAccess('SB_T_Sub_Task', 'import', true)){
+    $module_menu[]=array('index.php?module=Import&action=Step1&import_module=SB_T_Sub_Task&return_module=SB_T_Sub_Task&return_action=index', $app_strings['LBL_IMPORT'], 'Import', 'SB_T_Sub_Task');
 }

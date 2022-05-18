@@ -1,8 +1,4 @@
 <?php
-if (!defined('sugarEntry') || !sugarEntry) {
-    die('Not A Valid Entry Point');
-}
-
 /**
  *
  * SugarCRM Community Edition is a customer relationship management program developed by
@@ -42,45 +38,42 @@ if (!defined('sugarEntry') || !sugarEntry) {
  * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  */
 
-require_once 'modules/Contacts/views/view.edit.php';
-
-class CustomContactsViewEdit extends ContactsViewEdit
-{
-    /**
-     * @see SugarView::display()
-     *
-     * We are overridding the display method to manipulate the sectionPanels.
-     * If portal is not enabled then don't show the Portal Information panel.
-     */
-    public function display()
-    {
-        /**
-         * @Contact module customizations
-         * Hide custom fields from create view
-         */
-
-        global $sugar_config;
-        $new = empty($this->bean->id);
-
-        if ($new) { ?>
-
-            <script>
-                $(document).ready(function() {
-                    $('#created_date_time').parent().parent().parent().html('');
-                    $('#custom_identity').parent().parent().html('');
-                    $('#custom_contact_status').parent().parent().html('');
-                    $('#custom_phone_no').parent().parent().html('');
-                });
-            </script>
-
-        <?php }
-
-        parent::display();
-
-        /**
-         * @end here
-         */
-        ?>
-<?php
-    }
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
 }
+
+global $current_user;
+
+$dashletData['SB_T_Sub_TaskDashlet']['searchFields'] = array(
+    'date_entered' => array('default' => ''),
+    'date_modified' => array('default' => ''),
+    'assigned_user_id' => array(
+        'type' => 'assigned_user_name',
+        'default' => $current_user->name
+    )
+);
+$dashletData['SB_T_Sub_TaskDashlet']['columns'] = array(
+    'name' => array(
+        'width' => '40',
+        'label' => 'LBL_LIST_NAME',
+        'link' => true,
+        'default' => true
+    ),
+    'date_entered' => array(
+        'width' => '15',
+        'label' => 'LBL_DATE_ENTERED',
+        'default' => true
+    ),
+    'date_modified' => array(
+        'width' => '15',
+        'label' => 'LBL_DATE_MODIFIED'
+    ),
+    'created_by' => array(
+        'width' => '8',
+        'label' => 'LBL_CREATED'
+    ),
+    'assigned_user_name' => array(
+        'width' => '8',
+        'label' => 'LBL_LIST_ASSIGNED_USER'
+    ),
+);
