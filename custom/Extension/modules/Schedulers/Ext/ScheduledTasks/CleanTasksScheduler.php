@@ -7,7 +7,7 @@ function cleanTasksScheduler()
     $bean = BeanFactory::getBean('Tasks');
 
     
-    $query = "tasks.status = 'In Progress'";
+    $query = "tasks.status = 'Completed'";
     $tasks = $bean->get_full_list('', $query);
 
     foreach ($tasks as $task) {
