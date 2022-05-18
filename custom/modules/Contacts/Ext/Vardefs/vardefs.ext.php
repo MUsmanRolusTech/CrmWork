@@ -32,24 +32,6 @@ $dictionary['Contact']['fields']['custom_contact_status'] = array(
         'options' => 'c_status_types',
 );
 
-$dictionary['Contact']['fields']['account_name']['join_link_name'] = 'accounts_contacts_link';
-
-$dictionary['Contact']['fields']['account_employees_c'] = array (
-	'name' => 'account_employees_c',
-	'id_name' => 'account_id',
-	'type' => 'relate',
-	'rname' => 'employees',
-	'vname' => 'LBL_ACCOUNT_EMPLOYEES',
-	'link' => 'accounts',
-	'module' => 'Accounts',
-	'source' => 'non-db',
-	'dbType' => 'non-db',
-	'studio' => 'visible',
-	'massupdate' => false,
-	'join_name'=>'accounts',
-	'join_link_name'=>'accounts_contacts_link',
-);
-
 
 // created: 2022-05-12 12:08:41
 $dictionary["Contact"]["fields"]["ab_1_address_book_contacts_1"] = array (

@@ -1,8 +1,4 @@
 <?php
-if (!defined('sugarEntry') || !sugarEntry) {
-    die('Not A Valid Entry Point');
-}
-
 /**
  *
  * SugarCRM Community Edition is a customer relationship management program developed by
@@ -42,45 +38,48 @@ if (!defined('sugarEntry') || !sugarEntry) {
  * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  */
 
-require_once 'modules/Contacts/views/view.edit.php';
+$module_name = 'SB_T_Sub_Task';
+$viewdefs[$module_name]['DetailView'] = array(
+    'templateMeta' => array(
+        'form' => array(
+            'buttons' => array(
+                'EDIT',
+                'DUPLICATE',
+                'DELETE',
+                'FIND_DUPLICATES',
+            )
+        ),
+        'maxColumns' => '2',
+        'widths' => array(
+            array('label' => '10', 'field' => '30'),
+            array('label' => '10', 'field' => '30')
+        ),
+    ),
 
-class CustomContactsViewEdit extends ContactsViewEdit
-{
-    /**
-     * @see SugarView::display()
-     *
-     * We are overridding the display method to manipulate the sectionPanels.
-     * If portal is not enabled then don't show the Portal Information panel.
-     */
-    public function display()
-    {
-        /**
-         * @Contact module customizations
-         * Hide custom fields from create view
-         */
+    'panels' =>
+        array(
+            'default' =>
+                array(
+                    array(
+                        'name',
+                        'assigned_user_name',
+                    ),
+                    array(
+                        array(
+                            'name' => 'date_entered',
+                            'customCode' => '{$fields.date_entered.value} {$APP.LBL_BY} {$fields.created_by_name.value}',
+                            'label' => 'LBL_DATE_ENTERED',
+                        ),
+                        array(
+                            'name' => 'date_modified',
+                            'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
+                            'label' => 'LBL_DATE_MODIFIED',
+                        ),
+                    ),
 
-        global $sugar_config;
-        $new = empty($this->bean->id);
-
-        if ($new) { ?>
-
-            <script>
-                $(document).ready(function() {
-                    $('#created_date_time').parent().parent().parent().html('');
-                    $('#custom_identity').parent().parent().html('');
-                    $('#custom_contact_status').parent().parent().html('');
-                    $('#custom_phone_no').parent().parent().html('');
-                });
-            </script>
-
-        <?php }
-
-        parent::display();
-
-        /**
-         * @end here
-         */
-        ?>
-<?php
-    }
-}
+                    array(
+                        'description',
+                    ),
+                )
+        )
+);
