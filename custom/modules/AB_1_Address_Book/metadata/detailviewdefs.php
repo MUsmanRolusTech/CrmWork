@@ -56,11 +56,22 @@ array (
         ),
         1 => 
         array (
-          0 => 'assigned_user_name',
+          0 => 
+          array (
+            'name' => 'office_no',
+            'label' => 'LBL_OFFICE_NO',
+          ),
+          1 => 'assigned_user_name',
         ),
         2 => 
         array (
           0 => 'description',
+          1 => 
+          array (
+            'name' => 'relate_calls_c',
+            'studio' => 'visible',
+            'label' => 'LBL_RELATE_CALLS',
+          ),
         ),
       ),
     ),

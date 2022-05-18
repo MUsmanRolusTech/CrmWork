@@ -38,3 +38,21 @@ $dictionary['Account']['fields']['csm_contact_id'] = array(
         'audited' => true,
         'duplicate_merge' => 'disabled',
 );
+
+$dictionary['Account']['fields']['custom_status'] = array(
+        'name' => 'custom_status',
+        'vname' => 'LBL_CUSTOM_STATUS',
+        'type' => 'bool',
+        'len' => '1',
+        'default' => '0',
+        'required' => true,
+);
+
+$dictionary['Account']['fields']['crm_t_status'] = array(
+        'name' => 'crm_t_status',
+        'vname' => 'LBL_CRM_T_STATUS',
+        'type' => 'bool',
+        'len' => '1',
+        'default' => '0',
+        'required' => true,
+);
